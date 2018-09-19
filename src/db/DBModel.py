@@ -25,7 +25,7 @@ class User(BaseModel):
 
 
 class Receipt(BaseModel):
-    id = IntegerField(primary_key=True)
+    id = IntegerField(constraints=[SQL("DEFAULT 0")])
     receipt_at = CharField()
     tel = CharField()
     total_price = DoubleField()
@@ -38,7 +38,7 @@ class Receipt(BaseModel):
 
 
 class Item(BaseModel):
-    id = IntegerField(primary_key=True)
+    id = IntegerField(constraints=[SQL("DEFAULT 0")])
     receipt_id = IntegerField()
     name = CharField()
     price = DoubleField()
