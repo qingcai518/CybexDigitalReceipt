@@ -244,7 +244,6 @@ def lookup_assets(symbols):
 
 # database access.
 def create_receipt(receipt_at, tel, total_price, adjust_price, items):
-    print("1111111")
     item_ids = []
     try:
         with db.transaction():
@@ -256,20 +255,27 @@ def create_receipt(receipt_at, tel, total_price, adjust_price, items):
                 adjust_price=adjust_price
             )
 
+            print(receipt.id)
+            print(receipt.total_price)
+            print(receipt.adjust_price)
+            print(receipt.tel)
+            print(receipt.receipt_at)
+
             if receipt is None:
                 return None
 
-            for item in items:
-                item_info = Item.create(
-                    receipt_id=receipt.id,
-                    name=item.name,
-                    price=item.price
-                )
-                if item_info is None:
-                    continue
-                item_ids.append(item_info.id)
-            db.commit()
+            if items is not None and len(items) > 0:
+                for item in items:
+                    item_info = Item.create(
+                        receipt_id=receipt.id,
+                        name=item.name,
+                        price=item.price
+                    )
+                    if item_info is None:
+                        continue
+                    item_ids.append(item_info.id)
 
+            db.commit()
             result = {
                 "receipt_id": receipt.id,
                 "items": item_ids

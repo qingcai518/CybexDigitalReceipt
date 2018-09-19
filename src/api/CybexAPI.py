@@ -189,11 +189,6 @@ def add_receipt():
     adjust_price = data.get("adjust_price")
     items = data.get("items")
 
-    print(receipt_at)
-    print(tel)
-    print(total_price)
-    print(adjust_price)
-
     if receipt_at is None or tel is None or total_price is None or adjust_price is None:
         return error_handler("have no param", 400)
 
