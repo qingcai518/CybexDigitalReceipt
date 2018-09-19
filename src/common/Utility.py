@@ -244,7 +244,7 @@ def lookup_assets(symbols):
 
 # database access.
 def create_receipt(image_path, receipt_at, tel, total_price, adjust_price, items):
-    item_ids = []
+    item_infos = []
     try:
         with db.transaction():
             log.debug("插入receipt信息")
@@ -283,12 +283,12 @@ def create_receipt(image_path, receipt_at, tel, total_price, adjust_price, items
                     )
                     if item_info is None:
                         continue
-                    item_ids.append(item_info.id)
+                    item_infos.append(item_info)
 
             db.commit()
             result = {
                 "receipt_id": receipt_id,
-                "items": item_ids
+                "items": item_infos
             }
             return result
     except Exception as e:
