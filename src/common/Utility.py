@@ -8,6 +8,7 @@ from bitshares.account import Account
 from db.DBModel import *
 from flask_caching import Cache
 import websocket
+from peewee import *
 
 log = Logger("Cybex")
 cache = Cache()
