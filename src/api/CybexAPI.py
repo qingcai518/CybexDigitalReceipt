@@ -173,3 +173,34 @@ def market():
     if result is None:
         return error_handler("have no market history", 400)
     return response(result)
+
+
+@app.route('/v1/receipt/add', methods=['POST'])
+def add_receipt():
+    request.environ['CONTENT_TYPE'] = 'application/json'
+    try:
+        data = request.get_json()
+    except Exception:
+        return error_handler("参数形式错误")
+
+    receipt_at = data.get("receipt_at")
+    tel = data.get("tel")
+    total_price = data.get("total_price")
+    adjust_price = data.get("adjust_price")
+    items = data.get("items")
+
+    if receipt_at is None or tel is None or total_price is None or adjust_price is None:
+        return error_handler("have no param", 400)
+
+    # 计算hash值.
+    # TODO.
+
+    # 登陆到区块链.
+    # TODO.
+
+    # 登陆发票信息.
+    result = create_receipt(receipt_at, tel, total_price, adjust_price, items)
+    if result is None:
+        return error_handler("fail to create receipt", 400)
+
+    return response(result)

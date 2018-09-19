@@ -240,3 +240,42 @@ def lookup_assets(symbols):
     except Exception as e:
         msg = e.args[len(e.args) - 1]
         log.error("fail to get assets {0}".format(msg))
+
+
+# database access.
+def create_receipt(receipt_at, tel, total_price, adjust_price, items):
+    item_ids = []
+    try:
+        with db.transaction():
+            log.debug("插入receipt信息")
+            receipt = Receipt.create(
+                receipt_at=receipt_at,
+                tel=tel,
+                total_price=total_price,
+                adjust_price=adjust_price
+            )
+
+            if receipt is None:
+                return None
+
+            for item in items:
+                item_info = Item.create(
+                    receipt_id=receipt.id,
+                    name=item.name,
+                    price=item.price
+                )
+                if item_info is None:
+                    continue
+                item_ids.append(item_info.id)
+            db.commit()
+
+            result = {
+                "receipt_id": receipt.id,
+                "items": item_ids
+            }
+            return result
+    except Exception as e:
+        db.rollback()
+        msg = e.args[len(e.args) - 1]
+        log.error("fail to create receipt".format(msg))
+        return None

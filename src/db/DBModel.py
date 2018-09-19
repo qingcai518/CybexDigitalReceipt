@@ -22,3 +22,28 @@ class User(BaseModel):
 
     class Meta:
         table_name = 'user'
+
+
+class Receipt(BaseModel):
+    id = IntegerField(primary_key=True)
+    receipt_at = CharField()
+    tel = CharField()
+    total_price = DoubleField()
+    adjust_price = DoubleField()
+    created_at = CharField()
+    update_at = CharField()
+
+    class Meta:
+        table_name = 'receipt'
+
+
+class Item(BaseModel):
+    id = IntegerField(primary_key=True)
+    receipt_id = IntegerField()
+    name = CharField()
+    price = DoubleField()
+    created_at = CharField()
+    update_at = CharField()
+
+    class Meta:
+        table_name = 'item'
