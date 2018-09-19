@@ -283,7 +283,7 @@ def create_receipt(image_path, receipt_at, tel, total_price, adjust_price, items
                     )
                     if item_info is None:
                         continue
-                    item_infos.append(item_info)
+                    item_infos.append({"id": item_info.id, "name": itemName, "price": itemPrice})
 
             db.commit()
             result = {
