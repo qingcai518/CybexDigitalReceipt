@@ -189,6 +189,10 @@ def add_receipt():
     image_path = data.get("image_path")
     items = data.get("items")
 
+    # check image path.
+    if image_path is None:
+        return error_handler("image path を指定してください.")
+
     # 计算hash值.
     # TODO.
 
