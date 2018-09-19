@@ -255,21 +255,21 @@ def create_receipt(receipt_at, tel, total_price, adjust_price, items):
                 adjust_price=adjust_price
             )
 
-            print(receipt.id)
-            print(receipt.total_price)
-            print(receipt.adjust_price)
-            print(receipt.tel)
-            print(receipt.receipt_at)
-
             if receipt is None:
                 return None
 
             if items is not None and len(items) > 0:
                 for item in items:
+                    itemName = item["name"]
+                    itemPrice = item["price"]
+
+                    if itemName is None or itemPrice is None:
+                        continue
+
                     item_info = Item.create(
                         receipt_id=receipt.id,
-                        name=item.name,
-                        price=item.price
+                        name=itemName,
+                        price=itemPrice
                     )
                     if item_info is None:
                         continue
