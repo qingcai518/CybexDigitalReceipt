@@ -246,6 +246,9 @@ def lookup_assets(symbols):
 def create_receipt(receipt_at, tel, total_price, adjust_price, items):
     item_ids = []
     try:
+        if db is None:
+            print("db is None..")
+
         with db.transaction():
             log.debug("插入receipt信息")
             receipt = Receipt.create(
