@@ -186,10 +186,8 @@ def add_receipt():
     tel = data.get("tel")
     total_price = data.get("total_price")
     adjust_price = data.get("adjust_price")
+    image_path = data.get("image_path")
     items = data.get("items")
-
-    if receipt_at is None or tel is None or total_price is None or adjust_price is None:
-        return error_handler("have no param", 400)
 
     # 计算hash值.
     # TODO.
@@ -198,7 +196,7 @@ def add_receipt():
     # TODO.
 
     # 登陆发票信息.
-    result = create_receipt(receipt_at, tel, total_price, adjust_price, items)
+    result = create_receipt(image_path, receipt_at, tel, total_price, adjust_price, items)
     if result is None:
         return error_handler("fail to create receipt", 400)
 

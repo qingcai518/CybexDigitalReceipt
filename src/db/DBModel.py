@@ -30,6 +30,7 @@ class Receipt(BaseModel):
     tel = CharField()
     total_price = DoubleField()
     adjust_price = DoubleField()
+    image_path = CharField()
     created_at = CharField()
     update_at = CharField()
 

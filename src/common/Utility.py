@@ -243,19 +243,29 @@ def lookup_assets(symbols):
 
 
 # database access.
-def create_receipt(receipt_at, tel, total_price, adjust_price, items):
+def create_receipt(image_path, receipt_at, tel, total_price, adjust_price, items):
     item_ids = []
     try:
         with db.transaction():
             log.debug("插入receipt信息")
-            receipt = Receipt.create(
-                receipt_at=receipt_at,
-                tel=tel,
-                total_price=total_price,
-                adjust_price=adjust_price
-            )
 
-            if receipt is None:
+            params = {
+                "image_path": image_path
+            }
+            if receipt_at is not None:
+                params["receipt_at"] = receipt_at
+            if tel is not None:
+                params["tel"] = tel
+            if total_price is not None:
+                params["total_price"] = total_price
+            if adjust_price is not None:
+                params["adjust_price"] = adjust_price
+
+            data_source = [
+                params
+            ]
+            receipt_id = Receipt.insert_many(data_source).execute()
+            if receipt_id is None:
                 return None
 
             if items is not None and len(items) > 0:
@@ -267,7 +277,7 @@ def create_receipt(receipt_at, tel, total_price, adjust_price, items):
                         continue
 
                     item_info = Item.create(
-                        receipt_id=receipt.id,
+                        receipt_id=receipt_id,
                         name=itemName,
                         price=itemPrice
                     )
@@ -277,12 +287,11 @@ def create_receipt(receipt_at, tel, total_price, adjust_price, items):
 
             db.commit()
             result = {
-                "receipt_id": receipt.id,
+                "receipt_id": receipt_id,
                 "items": item_ids
             }
             return result
     except Exception as e:
         db.rollback()
-        msg = e.args[len(e.args) - 1]
-        log.error("fail to create receipt".format(msg))
+        log.error(e)
         return None
