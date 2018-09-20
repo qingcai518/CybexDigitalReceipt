@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a09c62f0-cb85-4f15-b77e-74e981bdc903" name="Default Changelist" comment="" />
+    <list default="true" id="a09c62f0-cb85-4f15-b77e-74e981bdc903" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/common/Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Config.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +32,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="5742" />
+          <entry key="py" value="5765" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="5742" />
+          <entry key="Python" value="5765" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -76,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="286" lean-forward="true" selection-start-line="286" selection-end-line="286" />
+            <state relative-caret-position="15">
+              <caret line="247" column="8" selection-start-line="247" selection-start-column="8" selection-end-line="247" selection-end-column="8" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
                 <marker date="1537330938379" expanded="true" signature="7299:8895" ph="..." />
@@ -89,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/common/Config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            <state relative-caret-position="255">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -137,8 +139,8 @@
         <option value="$PROJECT_DIR$/src/CybexServer.py" />
         <option value="$PROJECT_DIR$/src/db/DBModel.py" />
         <option value="$PROJECT_DIR$/src/api/CybexAPI.py" />
-        <option value="$PROJECT_DIR$/src/common/Config.py" />
         <option value="$PROJECT_DIR$/src/common/Utility.py" />
+        <option value="$PROJECT_DIR$/src/common/Config.py" />
       </list>
     </option>
   </component>
@@ -250,11 +252,11 @@
     <frame x="-2560" y="0" width="2560" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13942496" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13942496" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32851636" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32851636" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -315,23 +317,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/Config.py">
+    <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        <state relative-caret-position="15">
+          <caret line="247" column="8" selection-start-line="247" selection-start-column="8" selection-end-line="247" selection-end-column="8" />
           <folding>
-            <element signature="e#0#46#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
+            <marker date="1537330938379" expanded="true" signature="7299:8895" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
+    <entry file="file://$PROJECT_DIR$/src/common/Config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="286" lean-forward="true" selection-start-line="286" selection-end-line="286" />
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
-            <marker date="1537330938379" expanded="true" signature="7299:8895" ph="..." />
+            <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
