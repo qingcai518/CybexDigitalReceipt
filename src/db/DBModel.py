@@ -31,6 +31,7 @@ class Receipt(BaseModel):
     total_price = DoubleField()
     adjust_price = DoubleField()
     image_path = CharField()
+    hash = CharField()
     created_at = CharField()
     update_at = CharField()
 

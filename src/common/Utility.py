@@ -243,14 +243,15 @@ def lookup_assets(symbols):
 
 
 # database access.
-def create_receipt(image_path, receipt_at, tel, total_price, adjust_price, items):
+def create_receipt(image_path, hash, receipt_at, tel, total_price, adjust_price, items):
     item_infos = []
     try:
         with db.transaction():
             log.debug("插入receipt信息")
 
             params = {
-                "image_path": image_path
+                "image_path": image_path,
+                "hash": hash
             }
             if receipt_at is not None:
                 params["receipt_at"] = receipt_at

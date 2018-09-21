@@ -195,7 +195,6 @@ def add_receipt():
         return error_handler("image path を指定してください.")
 
     # 计算hash值.
-    # TODO.
     hash = crypt.crypt(json.dumps(data))
     print("hash === {0}".format(hash))
 
@@ -203,7 +202,7 @@ def add_receipt():
     # TODO.
 
     # 登陆发票信息.
-    result = create_receipt(image_path, receipt_at, tel, total_price, adjust_price, items)
+    result = create_receipt(image_path, hash, receipt_at, tel, total_price, adjust_price, items)
     if result is None:
         return error_handler("fail to create receipt", 400)
 
