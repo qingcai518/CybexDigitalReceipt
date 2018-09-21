@@ -197,7 +197,7 @@ def add_receipt():
     # 计算hash值.
     # TODO.
     hash = crypt.crypt(json.dumps(data))
-    print("hash === $0".format(hash))
+    print("hash === {0}".format(hash))
 
     # 登陆到区块链.
     # TODO.
