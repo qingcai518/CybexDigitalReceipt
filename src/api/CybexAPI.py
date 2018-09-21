@@ -1,5 +1,6 @@
 from flask import request, Blueprint
 from common.Utility import *
+import crypt
 
 app = Blueprint('admin_api', __name__)
 
@@ -195,6 +196,8 @@ def add_receipt():
 
     # 计算hash值.
     # TODO.
+    hash = crypt.crypt(data)
+    print("hash === $0".format(hash))
 
     # 登陆到区块链.
     # TODO.
