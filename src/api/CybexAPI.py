@@ -202,13 +202,13 @@ def add_receipt():
 
     # 登陆到区块链.
     # 登陆一笔转账信息.
-    # TODO.
-    do_transfer(ADMIN_USER, user_id, BASE_ASSET, BASE_REWARD, 0, hash)
-
+    transfer_result = do_transfer(ADMIN_USER, user_id, BASE_ASSET, BASE_REWARD, 0, hash)
+    if transfer_result is None:
+        return error_handler("fail to do transfer")
 
     # 登陆发票信息.
-    result = create_receipt(image_path, hash, receipt_at, tel, total_price, adjust_price, items)
-    if result is None:
-        return error_handler("fail to create receipt", 400)
+    results = create_receipt(image_path, hash, receipt_at, tel, total_price, adjust_price, items)
+    if results is None:
+        return error_handler("fail to create receipt infos.")
 
-    return response(result)
+    return response(results)
