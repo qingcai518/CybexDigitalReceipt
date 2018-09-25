@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a09c62f0-cb85-4f15-b77e-74e981bdc903" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/common/Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/Utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Utility.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,13 +34,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="30" />
-          <entry key="py" value="15085" />
+          <entry key="py" value="15144" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="30" />
-          <entry key="Python" value="15085" />
+          <entry key="Python" value="15144" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -77,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/common/Config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+            <state relative-caret-position="218">
+              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -89,16 +90,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="295" column="48" selection-start-line="295" selection-start-column="48" selection-end-line="295" selection-end-column="48" />
+            <state relative-caret-position="252">
+              <caret line="277" column="30" lean-forward="true" selection-start-line="277" selection-start-column="30" selection-end-line="277" selection-end-column="30" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
-                <marker date="1537868301767" expanded="true" signature="7502:7933" ph="..." />
-                <marker date="1537868301767" expanded="true" signature="9199:9202" ph="..." />
-                <marker date="1537868301767" expanded="true" signature="9329:10955" ph="..." />
+                <marker date="1537868439587" expanded="true" signature="7502:7933" ph="..." />
+                <marker date="1537868439587" expanded="true" signature="9260:9263" ph="..." />
+                <marker date="1537868439587" expanded="true" signature="9390:11016" ph="..." />
               </folding>
             </state>
           </provider>
@@ -171,8 +172,8 @@
         <option value="$PROJECT_DIR$/src/common/gen_trx.py" />
         <option value="$PROJECT_DIR$/src/db/DBModel.py" />
         <option value="$PROJECT_DIR$/src/api/CybexAPI.py" />
-        <option value="$PROJECT_DIR$/src/common/Config.py" />
         <option value="$PROJECT_DIR$/src/common/Utility.py" />
+        <option value="$PROJECT_DIR$/src/common/Config.py" />
       </list>
     </option>
   </component>
@@ -355,25 +356,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/Config.py">
+    <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+        <state relative-caret-position="252">
+          <caret line="277" column="30" lean-forward="true" selection-start-line="277" selection-start-column="30" selection-end-line="277" selection-end-column="30" />
           <folding>
-            <element signature="e#0#46#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
+            <marker date="1537868439587" expanded="true" signature="7502:7933" ph="..." />
+            <marker date="1537868439587" expanded="true" signature="9260:9263" ph="..." />
+            <marker date="1537868439587" expanded="true" signature="9390:11016" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
+    <entry file="file://$PROJECT_DIR$/src/common/Config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="295" column="48" selection-start-line="295" selection-start-column="48" selection-end-line="295" selection-end-column="48" />
+        <state relative-caret-position="218">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
-            <marker date="1537868301767" expanded="true" signature="7502:7933" ph="..." />
-            <marker date="1537868301767" expanded="true" signature="9199:9202" ph="..." />
-            <marker date="1537868301767" expanded="true" signature="9329:10955" ph="..." />
+            <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>

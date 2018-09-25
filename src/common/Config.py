@@ -13,7 +13,7 @@ db = PooledMySQLDatabase(
 
 # Block chain
 NODE_RPC_URL = 'https://hangzhou.51nebula.com/'
-WALLET_PWD = '123456'
+WALLET_PWD = 'longhash'
 NODE_RPC = 'wss://hangzhou.51nebula.com/'
 
 # main net.

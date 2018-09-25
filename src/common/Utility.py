@@ -272,6 +272,8 @@ def do_transfer(from_uid, to_uid, asset, amount, lock_time, memo):
     try:
         user_pub_key = get_user_pub_key(to_uid)
 
+        print("user public key = {0}".format(user_pub_key))
+
         net = BitShares(node=NODE_RPC, **{'prefix': 'cyb'})
         net.wallet.unlock(WALLET_PWD)
         account = Account(from_uid, bitshares_instance=net)
