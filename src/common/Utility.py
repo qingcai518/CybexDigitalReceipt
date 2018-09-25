@@ -258,10 +258,26 @@ def get_user(user_id):
         log.error(e)
 
 
-def do_transfer(from_uid, to_uid, asset, amount, user_pub_key, lock_time, memo):
+def get_user_pub_key(uid):
     try:
-        user = get_user(to_uid)
-        print(user)
+        user = get_user(uid)
+        if user is None:
+            raise Exception("can not found admin user.")
+
+        key_auths = user.get("active").get("key_auths")
+
+        if key_auths is None or len(key_auths) == 0 or len(key_auths[0]) == 0:
+            raise Exception("can not found active infos from key auths")
+
+        return key_auths[0][0]
+    except Exception as e:
+        log.error(e)
+        return None
+
+
+def do_transfer(from_uid, to_uid, asset, amount, lock_time, memo):
+    try:
+        user_pub_key = get_user_pub_key(to_uid)
 
         net = BitShares(node=NODE_RPC, **{'prefix': 'cyb'})
         net.wallet.unlock(WALLET_PWD)
@@ -282,12 +298,11 @@ def do_transfer(from_uid, to_uid, asset, amount, user_pub_key, lock_time, memo):
         else:
             result = net.transfer(to_uid, asset, memo, account=account)
 
+        print(result)
+
         log.info("==== do transfer === from: {0}, to: {1}".format(from_uid, to_uid))
     except Exception as e:
         print(e)
-
-    memo_hash = result.get("operations")[0][1].get("memo").get("message")
-    return memo_hash
 
 
 # database access.

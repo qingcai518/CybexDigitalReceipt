@@ -203,7 +203,7 @@ def add_receipt():
     # 登陆到区块链.
     # 登陆一笔转账信息.
     # TODO.
-    do_transfer("qingcai518", user_id, "CYB", "0.1", "user public key", 0, hash)
+    do_transfer(ADMIN_USER, user_id, BASE_ASSET, BASE_REWARD, 0, hash)
 
 
     # 登陆发票信息.
