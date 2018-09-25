@@ -299,8 +299,10 @@ def do_transfer(from_uid, to_uid, asset, amount, lock_time, memo):
 
         print(result)
         log.info("==== do transfer === from: {0}, to: {1}".format(from_uid, to_uid))
+        return result
     except Exception as e:
-        print(e)
+        log.error(e)
+        return None
 
 
 # database access.
