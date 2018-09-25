@@ -7,7 +7,6 @@ from bitshares import BitShares
 from bitshares.account import Account
 from db.DBModel import *
 from flask_caching import Cache
-from datetime import datetime
 import websocket
 
 log = Logger("Cybex")
@@ -243,11 +242,30 @@ def lookup_assets(symbols):
         log.error("fail to get assets {0}".format(msg))
 
 
-def do_transfer(from_address, to_address, asset, amount, user_pub_key, lock_time, memo):
+def get_user(user_id):
     try:
+        params = {"jsonrpc": "2.0", "method": "get_account_by_name", "params": [user_id], "id": 1}
+        r = requests.post(url=NODE_RPC_URL, data=json.dumps(params), timeout=30)
+
+        if r.status_code != 200:
+            raise Exception("fail to get user info")
+
+        print(r)
+        print("r result = {0}".format(r.text))
+
+        return json.loads(r.text).get("result")
+    except Exception as e:
+        log.error(e)
+
+
+def do_transfer(from_uid, to_uid, asset, amount, user_pub_key, lock_time, memo):
+    try:
+        user = get_user(to_uid)
+        print(user)
+
         net = BitShares(node=NODE_RPC, **{'prefix': 'cyb'})
         net.wallet.unlock(WALLET_PWD)
-        account = Account(from_address, bitshares_instance=net)
+        account = Account(from_uid, bitshares_instance=net)
 
         # 锁定期.
         extensions = []
@@ -260,11 +278,11 @@ def do_transfer(from_address, to_address, asset, amount, user_pub_key, lock_time
             params.append(extensions)
 
             dic = {'prefix': 'cyb', 'extensions': params}
-            result = net.transfer(to_address, amount, asset, memo, account=account, **dic)
+            result = net.transfer(to_uid, amount, asset, memo, account=account, **dic)
         else:
-            result = net.transfer(to_address, asset, memo, account=account)
+            result = net.transfer(to_uid, asset, memo, account=account)
 
-        log.info("==== do transfer === from: {0}, to: {1}".format(from_address, to_address))
+        log.info("==== do transfer === from: {0}, to: {1}".format(from_uid, to_uid))
     except Exception as e:
         print(e)
 

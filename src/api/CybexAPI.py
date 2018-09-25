@@ -183,6 +183,7 @@ def add_receipt():
     except Exception:
         return error_handler("参数形式错误")
 
+    user_id = data.get("user_id")
     receipt_at = data.get("receipt_at")
     tel = data.get("tel")
     total_price = data.get("total_price")
@@ -196,12 +197,13 @@ def add_receipt():
 
     # 计算hash值.
     hash = crypt.crypt(json.dumps(data))
-    print("hash === {0}".format(hash))
+    log.info("hash ====> {0}".format(hash))
+
 
     # 登陆到区块链.
     # 登陆一笔转账信息.
     # TODO.
-    do_transfer("qingcai518", "qingcai518", "CYB", "0.1", "key containts", 0, hash)
+    do_transfer("qingcai518", user_id, "CYB", "0.1", "user public key", 0, hash)
 
 
     # 登陆发票信息.

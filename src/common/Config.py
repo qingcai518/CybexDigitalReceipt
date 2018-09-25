@@ -32,3 +32,8 @@ cache_conf = {
 
 # Redis for store.
 rds = redis.Redis(host='localhost', port=6379)
+
+## base user and asset infos.
+ADMIN_USER = "qingcai518"
+BASE_ASSET = "CYB"
+BASE_REWARD = 0.1
