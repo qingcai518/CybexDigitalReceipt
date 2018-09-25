@@ -271,7 +271,7 @@ def get_user_pub_key(uid):
 
 
 def do_transfer(from_uid, to_uid, asset, amount, lock_time, memo):
-    log.info("==== do transfer ==== from:{0} to:{0} {1}:{2}".format(from_uid, to_uid, asset, amount))
+    log.info("==== do transfer ==== from:{0} to:{1} {2}:{3}".format(from_uid, to_uid, asset, amount))
     try:
         user_pub_key = get_user_pub_key(to_uid)
 
@@ -297,6 +297,7 @@ def do_transfer(from_uid, to_uid, asset, amount, lock_time, memo):
         log.info(result)
         return result
     except Exception as e:
+        print(e)
         log.error(e)
         return None
 
