@@ -250,9 +250,6 @@ def get_user(user_id):
         if r.status_code != 200:
             raise Exception("fail to get user info")
 
-        print(r)
-        print("r result = {0}".format(r.text))
-
         return json.loads(r.text).get("result")
     except Exception as e:
         log.error(e)
@@ -263,9 +260,7 @@ def get_user_pub_key(uid):
         user = get_user(uid)
         if user is None:
             raise Exception("can not found admin user.")
-
         key_auths = user.get("active").get("key_auths")
-
         if key_auths is None or len(key_auths) == 0 or len(key_auths[0]) == 0:
             raise Exception("can not found active infos from key auths")
 
@@ -296,10 +291,13 @@ def do_transfer(from_uid, to_uid, asset, amount, lock_time, memo):
             dic = {'prefix': 'cyb', 'extensions': params}
             result = net.transfer(to_uid, amount, asset, memo, account=account, **dic)
         else:
-            result = net.transfer(to_uid, asset, memo, account=account)
+            print("to user = {0}".format(to_uid))
+            print("asset = {0}".format(asset))
+            print("memo = {0}".format(memo))
+            print("account = {0}".format(account))
+            result = net.transfer(to_uid, amount, asset, memo, account=account)
 
         print(result)
-
         log.info("==== do transfer === from: {0}, to: {1}".format(from_uid, to_uid))
     except Exception as e:
         print(e)
