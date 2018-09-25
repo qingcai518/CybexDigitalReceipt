@@ -94,9 +94,7 @@ def get_balance(name, symbol):
         balance = account.balance(symbol)
         return balance
     except Exception as e:
-        # msg = e.args[len(e.args) - 1]
-        # log.error(msg)
-        print(e)
+        log.error(e)
         return None
 
 
@@ -109,8 +107,7 @@ def get_pairs():
             raise Exception("fail to get assets pairs")
 
     except Exception as e:
-        msg = e.args[len(e.args) -1]
-        log.error(msg)
+        log.error(e)
         return None
 
 
@@ -244,12 +241,8 @@ def lookup_assets(symbols):
 
 def get_user(user_id):
     try:
-        print("====> user id = {0}".format(user_id))
-
         params = {"jsonrpc": "2.0", "method": "get_account_by_name", "params": [user_id], "id": 1}
         r = requests.post(url=NODE_RPC_URL, data=json.dumps(params), timeout=30)
-
-        print("====> result = {0}".format(r.text))
 
         if r.status_code != 200:
             raise Exception("fail to get user info")
