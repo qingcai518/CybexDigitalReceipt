@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a09c62f0-cb85-4f15-b77e-74e981bdc903" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Utility.py" afterDir="false" />
-    </list>
+    <list default="true" id="a09c62f0-cb85-4f15-b77e-74e981bdc903" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,13 +31,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="30" />
-          <entry key="py" value="12659" />
+          <entry key="py" value="12874" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="30" />
-          <entry key="Python" value="12659" />
+          <entry key="Python" value="12874" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -97,12 +94,12 @@
         <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="563">
-              <caret line="299" column="21" selection-start-line="299" selection-start-column="21" selection-end-line="299" selection-end-column="21" />
+              <caret line="299" column="20" selection-start-line="299" selection-start-column="20" selection-end-line="299" selection-end-column="20" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
-                <marker date="1537862652041" expanded="true" signature="7602:8033" ph="..." />
-                <marker date="1537862652041" expanded="true" signature="8156:9186" ph="..." />
-                <marker date="1537862652041" expanded="true" signature="9313:10939" ph="..." />
+                <marker date="1537862974742" expanded="true" signature="7602:8033" ph="..." />
+                <marker date="1537862974742" expanded="true" signature="8156:9186" ph="..." />
+                <marker date="1537862974742" expanded="true" signature="9313:10939" ph="..." />
               </folding>
             </state>
           </provider>
@@ -387,12 +384,12 @@
     <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
-          <caret line="299" column="21" selection-start-line="299" selection-start-column="21" selection-end-line="299" selection-end-column="21" />
+          <caret line="299" column="20" selection-start-line="299" selection-start-column="20" selection-end-line="299" selection-end-column="20" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
-            <marker date="1537862652041" expanded="true" signature="7602:8033" ph="..." />
-            <marker date="1537862652041" expanded="true" signature="8156:9186" ph="..." />
-            <marker date="1537862652041" expanded="true" signature="9313:10939" ph="..." />
+            <marker date="1537862974742" expanded="true" signature="7602:8033" ph="..." />
+            <marker date="1537862974742" expanded="true" signature="8156:9186" ph="..." />
+            <marker date="1537862974742" expanded="true" signature="9313:10939" ph="..." />
           </folding>
         </state>
       </provider>
