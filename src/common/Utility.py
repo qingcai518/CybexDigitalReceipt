@@ -244,11 +244,12 @@ def lookup_assets(symbols):
 
 def get_user(user_id):
     try:
+        print("====> user id = {0}".format(user_id))
+
         params = {"jsonrpc": "2.0", "method": "get_account_by_name", "params": [user_id], "id": 1}
         r = requests.post(url=NODE_RPC_URL, data=json.dumps(params), timeout=30)
 
-        print("======= user info =====")
-        print(r.text)
+        print("====> result = {0}".format(r.text))
 
         if r.status_code != 200:
             raise Exception("fail to get user info")
