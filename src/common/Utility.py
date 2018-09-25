@@ -258,8 +258,6 @@ def get_user_pub_key(uid):
         if user is None:
             raise Exception("can not found admin user.")
 
-        print("==== user ==== {0}".format(user))
-
         key_auths = user.get("active").get("key_auths")
         if key_auths is None or len(key_auths) == 0 or len(key_auths[0]) == 0:
             raise Exception("can not found active infos from key auths")
@@ -274,8 +272,6 @@ def do_transfer(from_uid, to_uid, asset, amount, lock_time, memo):
     log.info("==== do transfer ==== from:{0} to:{1} {2}:{3}".format(from_uid, to_uid, asset, amount))
     try:
         user_pub_key = get_user_pub_key(to_uid)
-
-        print("user public key = {0}".format(user_pub_key))
 
         net = BitShares(node=NODE_RPC, **{'prefix': 'cyb'})
         net.wallet.unlock(WALLET_PWD)
@@ -294,12 +290,6 @@ def do_transfer(from_uid, to_uid, asset, amount, lock_time, memo):
             dic = {'prefix': 'cyb', 'extensions': params}
             result = net.transfer(to_uid, amount, asset, memo, account=account, **dic)
         else:
-            print("to user = {0}".format(to_uid))
-            print("amount = {0}".format(amount))
-            print("asset = {0}".format(asset))
-            print("memo = {0}".format(memo))
-            print("account = {0}".format(account))
-
             result = net.transfer(to_uid, amount, asset, memo, account=account)
 
         log.info(result)
