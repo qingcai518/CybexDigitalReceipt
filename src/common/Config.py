@@ -12,14 +12,14 @@ db = PooledMySQLDatabase(
 )
 
 # Block chain
-# NODE_RPC_URL = 'https://hangzhou.51nebula.com/'
-# WALLET_PWD = '123456'
-# NODE_RPC = 'wss://hangzhou.51nebula.com/'
+NODE_RPC_URL = 'https://hangzhou.51nebula.com/'
+WALLET_PWD = '123456'
+NODE_RPC = 'wss://hangzhou.51nebula.com/'
 
 # main net.
-NODE_RPC_URL = 'https://tokyo-01.cybex.io/'
-WALLET_PWD = '123456'
-NODE_RPC = 'ws://18.136.17.169:8090/'
+# NODE_RPC_URL = 'https://tokyo-01.cybex.io/'
+# WALLET_PWD = '123456'
+# NODE_RPC = 'ws://18.136.17.169:8090/'    // 在新的aws上面不能用wss, 只能用ws的地址.
 # NODE_RPC = 'wss://tokyo-01.cybex.io/'
 
 # Redis api cache.

@@ -297,7 +297,6 @@ def do_transfer(from_uid, to_uid, asset, amount, lock_time, memo):
         log.info(result)
         return result
     except Exception as e:
-        print(e)
         log.error(e)
         return None
 
