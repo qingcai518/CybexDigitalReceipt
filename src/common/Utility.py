@@ -289,6 +289,12 @@ def do_transfer(from_uid, to_uid, asset, amount, lock_time, memo):
             dic = {'prefix': 'cyb', 'extensions': params}
             result = net.transfer(to_uid, amount, asset, memo, account=account, **dic)
         else:
+            print("to user = {0}".format(to_uid))
+            print("amount = {0}".format(amount))
+            print("asset = {0}".format(asset))
+            print("memo = {0}".format(memo))
+            print("account = {0}".format(account))
+
             result = net.transfer(to_uid, amount, asset, memo, account=account)
 
         log.info(result)
