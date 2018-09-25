@@ -199,7 +199,10 @@ def add_receipt():
     print("hash === {0}".format(hash))
 
     # 登陆到区块链.
+    # 登陆一笔转账信息.
     # TODO.
+    do_transfer("qingcai518", "qingcai518", "CYB", "0.1", "key containts", 0, hash)
+
 
     # 登陆发票信息.
     result = create_receipt(image_path, hash, receipt_at, tel, total_price, adjust_price, items)

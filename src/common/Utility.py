@@ -7,6 +7,7 @@ from bitshares import BitShares
 from bitshares.account import Account
 from db.DBModel import *
 from flask_caching import Cache
+from datetime import datetime
 import websocket
 
 log = Logger("Cybex")
@@ -240,6 +241,37 @@ def lookup_assets(symbols):
     except Exception as e:
         msg = e.args[len(e.args) - 1]
         log.error("fail to get assets {0}".format(msg))
+
+
+def do_transfer(from_address, to_address, asset, amount, user_pub_key, lock_time, memo):
+    try:
+        current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+        net = BitShares(node=NODE_RPC, **{'prefix': 'cyb'})
+        net.wallet.unlock(WALLET_PWD)
+        account = Account(from_address, bitshares_instance=net)
+
+        # 锁定期.
+        extensions = []
+        if lock_time < 0:
+            extensions.append(1)
+            extensions.append({"vesting_period": lock_time, "public_key": user_pub_key})
+
+        if len(extensions) > 0:
+            params = []
+            params.append(extensions)
+
+            dic = {'prefix': 'cyb', 'extensions': params}
+            result = net.transfer(to_address, amount, asset, memo, account=account, **dic)
+        else:
+            result = net.transfer(to_address, asset, memo, account=account)
+
+        log.debug("===== transfer result ===== {0}".format(result))
+
+        memo_hash = result.get("operations")[0][1].get("memo").get("message")
+        return memo_hash
+    except Exception as e:
+        print(e)
 
 
 # database access.
