@@ -33,13 +33,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="30" />
-          <entry key="py" value="13960" />
+          <entry key="py" value="14211" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="30" />
-          <entry key="Python" value="13960" />
+          <entry key="Python" value="14211" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -71,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api/CybexAPI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="204" column="28" lean-forward="true" selection-start-line="204" selection-start-column="28" selection-end-line="204" selection-end-column="28" />
+            <state relative-caret-position="310">
+              <caret line="199" column="43" lean-forward="true" selection-start-line="199" selection-start-column="43" selection-end-line="199" selection-end-column="43" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -95,13 +95,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="296" column="24" selection-start-line="296" selection-start-column="24" selection-end-line="296" selection-end-column="24" />
+            <state relative-caret-position="525">
+              <caret line="297" column="21" selection-start-line="297" selection-start-column="21" selection-end-line="297" selection-end-column="21" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
-                <marker date="1537863646098" expanded="true" signature="7602:8033" ph="..." />
-                <marker date="1537863646098" expanded="true" signature="8259:9060" ph="..." />
-                <marker date="1537863646098" expanded="true" signature="9187:10813" ph="..." />
+                <marker date="1537864472791" expanded="true" signature="7602:8033" ph="..." />
+                <marker date="1537864472791" expanded="true" signature="8258:9059" ph="..." />
+                <marker date="1537864472791" expanded="true" signature="9186:10812" ph="..." />
               </folding>
             </state>
           </provider>
@@ -131,7 +131,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>db</find>
       <find>db.</find>
       <find>image_path</find>
       <find>item_ids</find>
@@ -157,10 +156,11 @@
       <find>hash</find>
       <find>account</find>
       <find>user_pub_key</find>
-      <find>print</find>
       <find>result =</find>
       <find>do_transfer</find>
       <find>result</find>
+      <find>print</find>
+      <find>log.info</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -331,20 +331,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/transaction_builder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-208">
-          <caret line="47" column="32" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/gen_trx.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="37" column="3" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/transaction_builder.py" />
+    <entry file="file://$PROJECT_DIR$/src/common/gen_trx.py" />
     <entry file="file://$PROJECT_DIR$/src/db/DBModel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="467">
@@ -375,8 +363,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/api/CybexAPI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="204" column="28" lean-forward="true" selection-start-line="204" selection-start-column="28" selection-end-line="204" selection-end-column="28" />
+        <state relative-caret-position="310">
+          <caret line="199" column="43" lean-forward="true" selection-start-line="199" selection-start-column="43" selection-end-line="199" selection-end-column="43" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
@@ -385,13 +373,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="296" column="24" selection-start-line="296" selection-start-column="24" selection-end-line="296" selection-end-column="24" />
+        <state relative-caret-position="525">
+          <caret line="297" column="21" selection-start-line="297" selection-start-column="21" selection-end-line="297" selection-end-column="21" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
-            <marker date="1537863646098" expanded="true" signature="7602:8033" ph="..." />
-            <marker date="1537863646098" expanded="true" signature="8259:9060" ph="..." />
-            <marker date="1537863646098" expanded="true" signature="9187:10813" ph="..." />
+            <marker date="1537864472791" expanded="true" signature="7602:8033" ph="..." />
+            <marker date="1537864472791" expanded="true" signature="8258:9059" ph="..." />
+            <marker date="1537864472791" expanded="true" signature="9186:10812" ph="..." />
           </folding>
         </state>
       </provider>
