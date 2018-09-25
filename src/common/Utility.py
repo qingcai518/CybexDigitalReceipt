@@ -271,6 +271,7 @@ def get_user_pub_key(uid):
 
 
 def do_transfer(from_uid, to_uid, asset, amount, lock_time, memo):
+    log.info("==== do transfer ==== from:{0}, to {1} {2:{3}}".format(from_uid, to_uid, asset, amount))
     try:
         user_pub_key = get_user_pub_key(to_uid)
 
@@ -291,14 +292,9 @@ def do_transfer(from_uid, to_uid, asset, amount, lock_time, memo):
             dic = {'prefix': 'cyb', 'extensions': params}
             result = net.transfer(to_uid, amount, asset, memo, account=account, **dic)
         else:
-            print("to user = {0}".format(to_uid))
-            print("asset = {0}".format(asset))
-            print("memo = {0}".format(memo))
-            print("account = {0}".format(account))
             result = net.transfer(to_uid, amount, asset, memo, account=account)
 
-        print(result)
-        log.info("==== do transfer === from: {0}, to: {1}".format(from_uid, to_uid))
+        log.info(result)
         return result
     except Exception as e:
         log.error(e)
