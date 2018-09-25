@@ -257,6 +257,9 @@ def get_user_pub_key(uid):
         user = get_user(uid)
         if user is None:
             raise Exception("can not found admin user.")
+
+        print("==== user ==== {0}".format(user))
+
         key_auths = user.get("active").get("key_auths")
         if key_auths is None or len(key_auths) == 0 or len(key_auths[0]) == 0:
             raise Exception("can not found active infos from key auths")
