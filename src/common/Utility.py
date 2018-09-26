@@ -236,7 +236,8 @@ def get_market_history(from_id, to_id, time_type, start, end):
 def lookup_assets(symbols):
     try:
         params = {"jsonrpc": "2.0", "method": "lookup_asset_symbols", "params": [symbols], "id": 1}
-        r = requests.post(url=NODE_RPC_URL, data=json.dumps(params), timeout=30)
+        # r = requests.post(url=NODE_RPC_URL, data=json.dumps(params), timeout=30)
+        r = requests.post(url="https://tokyo-01.cybex.io/", data=json.dumps(params), timeout=30)   # 需要连接所有节点才能取到k线用信息.
 
         if r.status_code != 200:
             raise Exception("fail to get assets' info")
