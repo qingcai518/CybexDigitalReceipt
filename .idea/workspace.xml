@@ -33,13 +33,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="30" />
-          <entry key="py" value="16110" />
+          <entry key="py" value="16153" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="30" />
-          <entry key="Python" value="16110" />
+          <entry key="Python" value="16153" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -95,13 +95,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="80" column="52" selection-start-line="80" selection-start-column="52" selection-end-line="80" selection-end-column="52" />
+            <state relative-caret-position="448">
+              <caret line="77" column="50" selection-start-line="77" selection-start-column="50" selection-end-line="77" selection-end-column="50" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
-                <marker date="1537935508564" expanded="true" signature="7825:8257" ph="..." />
-                <marker date="1537935508564" expanded="true" signature="9280:9283" ph="..." />
-                <marker date="1537935508564" expanded="true" signature="9410:11036" ph="..." />
+                <marker date="1537935629408" expanded="true" signature="7658:8090" ph="..." />
+                <marker date="1537935629408" expanded="true" signature="9113:9116" ph="..." />
+                <marker date="1537935629408" expanded="true" signature="9243:10869" ph="..." />
               </folding>
             </state>
           </provider>
@@ -287,11 +287,11 @@
     <frame x="-2560" y="0" width="2560" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13942496" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13942496" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32177263" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32177263" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -373,13 +373,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="80" column="52" selection-start-line="80" selection-start-column="52" selection-end-line="80" selection-end-column="52" />
+        <state relative-caret-position="448">
+          <caret line="77" column="50" selection-start-line="77" selection-start-column="50" selection-end-line="77" selection-end-column="50" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
-            <marker date="1537935508564" expanded="true" signature="7825:8257" ph="..." />
-            <marker date="1537935508564" expanded="true" signature="9280:9283" ph="..." />
-            <marker date="1537935508564" expanded="true" signature="9410:11036" ph="..." />
+            <marker date="1537935629408" expanded="true" signature="7658:8090" ph="..." />
+            <marker date="1537935629408" expanded="true" signature="9113:9116" ph="..." />
+            <marker date="1537935629408" expanded="true" signature="9243:10869" ph="..." />
           </folding>
         </state>
       </provider>

@@ -68,18 +68,14 @@ def create_account(name, password):
             storekeys=False
         )
 
+        print("result = {0}".format(result))
+
         # add to user table.
         try:
             data = result["operations"][0][1]
             owner_key = data["owner"]["key_auths"][0][0]
             active_key = data["active"]["key_auths"][0][0]
             memo_key = data["options"]["memo_key"]
-
-            print("data = {0}" .format(data))
-            print("owner key = {0}".format(owner_key))
-            print("active key = {0}".format(active_key))
-            print("memo key = {0}".format(memo_key))
-
         except Exception:
             print("can not get keys")
 
