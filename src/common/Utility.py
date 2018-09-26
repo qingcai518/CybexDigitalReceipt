@@ -114,7 +114,6 @@ def get_pairs():
             except Exception as e:
                 print(e)
 
-            print(result)
             return result
         else:
             raise Exception("fail to get assets pairs")
