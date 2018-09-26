@@ -83,8 +83,7 @@ def create_account(name, password):
         })
         return response(result)
     except Exception as e:
-        msg = e.args[len(e.args) - 1]
-        return error_handler(msg)
+        return error_handler(e, 400)
 
 
 ##
