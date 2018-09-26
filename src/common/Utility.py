@@ -109,9 +109,12 @@ def get_pairs():
         r = requests.get(url_paris)
         if r.status_code == 200:
             result = json.loads(r.text)
-            eth_paris = result.get("JADE.ETH")
-            eth_paris.append("JADE.JCT")
-            print(eth_paris)
+            try:
+                result.get("JADE.ETH").append("JADE.JCT")
+            except Exception as e:
+                print(e)
+
+            print(result)
             return result
         else:
             raise Exception("fail to get assets pairs")
@@ -186,7 +189,7 @@ def get_ticker(from_asset, to_asset):
 
         if r.status_code != 200:
             raise Exception("fail to request rpc node.")
-        
+
         return json.loads(r.text)
     except Exception as e:
         msg = e.args[len(e.args) - 1]

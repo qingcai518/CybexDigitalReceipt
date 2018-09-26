@@ -33,13 +33,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="30" />
-          <entry key="py" value="18630" />
+          <entry key="py" value="18768" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="30" />
-          <entry key="Python" value="18630" />
+          <entry key="Python" value="18768" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -95,13 +95,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="188" column="8" selection-start-line="188" selection-start-column="8" selection-end-line="188" selection-end-column="8" />
+            <state relative-caret-position="358">
+              <caret line="116" column="24" selection-start-line="116" selection-start-column="24" selection-end-line="116" selection-end-column="24" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
-                <marker date="1537945816405" expanded="true" signature="8160:8592" ph="..." />
-                <marker date="1537945816405" expanded="true" signature="9615:9618" ph="..." />
-                <marker date="1537945816405" expanded="true" signature="9745:11370" ph="..." />
+                <marker date="1537946050846" expanded="true" signature="8197:8629" ph="..." />
+                <marker date="1537946050846" expanded="true" signature="9652:9655" ph="..." />
+                <marker date="1537946050846" expanded="true" signature="9782:11407" ph="..." />
               </folding>
             </state>
           </provider>
@@ -155,7 +155,6 @@
       <find>create_account</find>
       <find>CryptographyDeprecationWarning: signer and verifier have been deprecated. Please use sign and verify instead</find>
       <find>chart</find>
-      <find>get_pairs</find>
       <find>pairs</find>
       <find>ADMIN_USER</find>
       <find>market</find>
@@ -182,6 +181,7 @@
       <find>data = json.loads(r.text)</find>
       <find>JADE.JCT</find>
       <find>data</find>
+      <find>get_pairs</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -405,13 +405,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="188" column="8" selection-start-line="188" selection-start-column="8" selection-end-line="188" selection-end-column="8" />
+        <state relative-caret-position="358">
+          <caret line="116" column="24" selection-start-line="116" selection-start-column="24" selection-end-line="116" selection-end-column="24" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
-            <marker date="1537945816405" expanded="true" signature="8160:8592" ph="..." />
-            <marker date="1537945816405" expanded="true" signature="9615:9618" ph="..." />
-            <marker date="1537945816405" expanded="true" signature="9745:11370" ph="..." />
+            <marker date="1537946050846" expanded="true" signature="8197:8629" ph="..." />
+            <marker date="1537946050846" expanded="true" signature="9652:9655" ph="..." />
+            <marker date="1537946050846" expanded="true" signature="9782:11407" ph="..." />
           </folding>
         </state>
       </provider>
