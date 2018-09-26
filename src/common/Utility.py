@@ -186,10 +186,7 @@ def get_ticker(from_asset, to_asset):
 
         if r.status_code != 200:
             raise Exception("fail to request rpc node.")
-
-        data = json.loads(r.text)
-        print("===== data: {0}".format(data))
-
+        
         return json.loads(r.text)
     except Exception as e:
         msg = e.args[len(e.args) - 1]
