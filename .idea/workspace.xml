@@ -33,13 +33,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="30" />
-          <entry key="py" value="18542" />
+          <entry key="py" value="18626" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="30" />
-          <entry key="Python" value="18542" />
+          <entry key="Python" value="18626" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -83,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api/JCTSample.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+            <state relative-caret-position="-475">
+              <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
               <folding>
                 <element signature="e#0#60#0" expanded="true" />
               </folding>
@@ -95,13 +95,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="184" column="57" selection-start-line="184" selection-start-column="57" selection-end-line="184" selection-end-column="57" />
+            <state relative-caret-position="298">
+              <caret line="190" column="43" selection-start-line="190" selection-start-column="43" selection-end-line="190" selection-end-column="43" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
-                <marker date="1537945445752" expanded="true" signature="8152:8584" ph="..." />
-                <marker date="1537945445752" expanded="true" signature="9607:9610" ph="..." />
-                <marker date="1537945445752" expanded="true" signature="9737:11362" ph="..." />
+                <marker date="1537945686969" expanded="true" signature="8233:8665" ph="..." />
+                <marker date="1537945686969" expanded="true" signature="9688:9691" ph="..." />
+                <marker date="1537945686969" expanded="true" signature="9818:11443" ph="..." />
               </folding>
             </state>
           </provider>
@@ -152,9 +152,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>error_handler</find>
-      <find>create_receipt</find>
-      <find>manager</find>
       <find>create_account</find>
       <find>CryptographyDeprecationWarning: signer and verifier have been deprecated. Please use sign and verify instead</find>
       <find>chart</find>
@@ -182,6 +179,9 @@
       <find>get_market_history</find>
       <find>lookup_assets</find>
       <find>ticker</find>
+      <find>data = json.loads(r.text)</find>
+      <find>JADE.JCT</find>
+      <find>data</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -309,11 +309,11 @@
     <frame x="-2560" y="0" width="2560" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13942496" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13942496" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32177263" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32177263" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -373,16 +373,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/JCTSample.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/CybexAPI.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -403,15 +393,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/JCTSample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-475">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="184" column="57" selection-start-line="184" selection-start-column="57" selection-end-line="184" selection-end-column="57" />
+        <state relative-caret-position="298">
+          <caret line="190" column="43" selection-start-line="190" selection-start-column="43" selection-end-line="190" selection-end-column="43" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
-            <marker date="1537945445752" expanded="true" signature="8152:8584" ph="..." />
-            <marker date="1537945445752" expanded="true" signature="9607:9610" ph="..." />
-            <marker date="1537945445752" expanded="true" signature="9737:11362" ph="..." />
+            <marker date="1537945686969" expanded="true" signature="8233:8665" ph="..." />
+            <marker date="1537945686969" expanded="true" signature="9688:9691" ph="..." />
+            <marker date="1537945686969" expanded="true" signature="9818:11443" ph="..." />
           </folding>
         </state>
       </provider>
