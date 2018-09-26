@@ -12,7 +12,6 @@ import websocket
 log = Logger("Cybex")
 cache = Cache()
 blockchain = ""
-manager = "1.2.2679"
 url_paris = "https://app.cybex.io/lab/exchange/asset"
 
 
@@ -58,8 +57,8 @@ def create_account(name, password):
 
         result = instance.create_account(
             account_name=name,
-            registrar=manager,
-            referrer=manager,
+            registrar=ADMIN_USER_ID,
+            referrer=ADMIN_USER_ID,
             referrer_percent=50,
             password=password,
             storekeys=False

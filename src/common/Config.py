@@ -36,5 +36,6 @@ rds = redis.Redis(host='localhost', port=6379)
 
 ## base user and asset infos.
 ADMIN_USER = "zhuanzhi518"
+ADMIN_USER_ID = "1.2.4432"
 BASE_ASSET = "CYB"
 BASE_REWARD = 0.1

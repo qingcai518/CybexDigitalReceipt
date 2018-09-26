@@ -212,3 +212,24 @@ def add_receipt():
         return error_handler("fail to create receipt infos.")
 
     return response(results)
+
+
+@app.route('/v1/account/fetch', methods=['POST'])
+def get_account_id():
+    request.environ['CONTENT_TYPE'] = 'application/json'
+    try:
+        data = request.get_json()
+    except Exception:
+        return error_handler("参数形式错误")
+
+    uid = data.get("user_id")
+    if uid is None:
+        return error_handler("have no user id", 400)
+
+    user = get_user(uid)
+    print(user)
+
+    if user is None:
+        return error_handler("fail to get user", 400)
+
+    return response(user)
