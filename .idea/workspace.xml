@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a09c62f0-cb85-4f15-b77e-74e981bdc903" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/common/Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/Utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Utility.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,24 +23,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="13" />
+          <entry key="py" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="13" />
+          <entry key="Python" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="30" />
-          <entry key="py" value="16153" />
+          <entry key="py" value="16279" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="30" />
-          <entry key="Python" value="16153" />
+          <entry key="Python" value="16279" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -83,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/common/Config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
-              <caret line="38" column="13" selection-start-line="38" selection-end-line="38" selection-end-column="13" />
+            <state relative-caret-position="178">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -95,14 +96,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="77" column="50" selection-start-line="77" selection-start-column="50" selection-end-line="77" selection-end-column="50" />
+            <state relative-caret-position="580">
+              <caret line="92" column="38" selection-start-line="92" selection-start-column="38" selection-end-line="92" selection-end-column="38" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
-                <marker date="1537935629408" expanded="true" signature="7658:8090" ph="..." />
-                <marker date="1537935629408" expanded="true" signature="9113:9116" ph="..." />
-                <marker date="1537935629408" expanded="true" signature="9243:10869" ph="..." />
+                <marker date="1537936070592" expanded="true" signature="7715:8147" ph="..." />
+                <marker date="1537936070592" expanded="true" signature="9170:9173" ph="..." />
+                <marker date="1537936070592" expanded="true" signature="9300:10926" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.pyenv/versions/3.6.5/lib/python3.6/site-packages/bitshares/bitshares.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="684" lean-forward="true" selection-start-line="684" selection-end-line="684" />
             </state>
           </provider>
         </entry>
@@ -131,7 +141,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>now(</find>
       <find>receipt_id</find>
       <find>current_time</find>
       <find>lock_time</find>
@@ -159,8 +168,9 @@
       <find>error_handler</find>
       <find>create_receipt</find>
       <find>manager</find>
-      <find>ADMIN_USER</find>
       <find>create_account</find>
+      <find>CryptographyDeprecationWarning: signer and verifier have been deprecated. Please use sign and verify instead</find>
+      <find>ADMIN_USER</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -287,11 +297,11 @@
     <frame x="-2560" y="0" width="2560" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13942496" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13942496" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32177263" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32177263" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -334,13 +344,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.pyenv/versions/3.6.5/lib/python3.6/site-packages/bitshares/bitshares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="448" column="8" selection-start-line="448" selection-start-column="8" selection-end-line="448" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CybexServer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -361,10 +364,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/3.6.5/lib/python3.6/site-packages/bitshares/bitshares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="684" lean-forward="true" selection-start-line="684" selection-end-line="684" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/Config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="38" column="13" selection-start-line="38" selection-end-line="38" selection-end-column="13" />
+        <state relative-caret-position="178">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
@@ -373,13 +383,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="77" column="50" selection-start-line="77" selection-start-column="50" selection-end-line="77" selection-end-column="50" />
+        <state relative-caret-position="580">
+          <caret line="92" column="38" selection-start-line="92" selection-start-column="38" selection-end-line="92" selection-end-column="38" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
-            <marker date="1537935629408" expanded="true" signature="7658:8090" ph="..." />
-            <marker date="1537935629408" expanded="true" signature="9113:9116" ph="..." />
-            <marker date="1537935629408" expanded="true" signature="9243:10869" ph="..." />
+            <marker date="1537936070592" expanded="true" signature="7715:8147" ph="..." />
+            <marker date="1537936070592" expanded="true" signature="9170:9173" ph="..." />
+            <marker date="1537936070592" expanded="true" signature="9300:10926" ph="..." />
           </folding>
         </state>
       </provider>
