@@ -181,7 +181,8 @@ def check_account(name, password):
 def get_ticker(from_asset, to_asset):
     try:
         param = {"jsonrpc": "2.0", "method": "get_ticker", "params": [from_asset, to_asset], "id": 1}
-        r = requests.post(url=NODE_RPC_URL, data=json.dumps(param), timeout=30)
+        # r = requests.post(url=NODE_RPC_URL, data=json.dumps(param), timeout=30)
+        r = requests.post(url="https://tokyo-01.cybex.io/", data=json.dumps(param), timeout=30)
 
         if r.status_code != 200:
             raise Exception("fail to request rpc node.")

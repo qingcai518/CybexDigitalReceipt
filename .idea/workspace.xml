@@ -33,13 +33,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="30" />
-          <entry key="py" value="18538" />
+          <entry key="py" value="18542" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="30" />
-          <entry key="Python" value="18538" />
+          <entry key="Python" value="18542" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -95,13 +95,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="239" column="57" selection-start-line="239" selection-start-column="57" selection-end-line="239" selection-end-column="57" />
+            <state relative-caret-position="521">
+              <caret line="184" column="57" selection-start-line="184" selection-start-column="57" selection-end-line="184" selection-end-column="57" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
-                <marker date="1537945290014" expanded="true" signature="8054:8486" ph="..." />
-                <marker date="1537945290014" expanded="true" signature="9509:9512" ph="..." />
-                <marker date="1537945290014" expanded="true" signature="9639:11264" ph="..." />
+                <marker date="1537945445752" expanded="true" signature="8152:8584" ph="..." />
+                <marker date="1537945445752" expanded="true" signature="9607:9610" ph="..." />
+                <marker date="1537945445752" expanded="true" signature="9737:11362" ph="..." />
               </folding>
             </state>
           </provider>
@@ -111,7 +111,7 @@
         <entry file="file://$PROJECT_DIR$/src/common/Config.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="282">
-              <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="44" />
+              <caret line="19" column="44" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="44" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -160,7 +160,6 @@
       <find>chart</find>
       <find>get_pairs</find>
       <find>pairs</find>
-      <find>ticker</find>
       <find>ADMIN_USER</find>
       <find>market</find>
       <find>content size</find>
@@ -182,6 +181,7 @@
       <find>asset_id</find>
       <find>get_market_history</find>
       <find>lookup_assets</find>
+      <find>ticker</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -396,7 +396,7 @@
     <entry file="file://$PROJECT_DIR$/src/common/Config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
-          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="44" />
+          <caret line="19" column="44" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="44" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
@@ -405,13 +405,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="239" column="57" selection-start-line="239" selection-start-column="57" selection-end-line="239" selection-end-column="57" />
+        <state relative-caret-position="521">
+          <caret line="184" column="57" selection-start-line="184" selection-start-column="57" selection-end-line="184" selection-end-column="57" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
-            <marker date="1537945290014" expanded="true" signature="8054:8486" ph="..." />
-            <marker date="1537945290014" expanded="true" signature="9509:9512" ph="..." />
-            <marker date="1537945290014" expanded="true" signature="9639:11264" ph="..." />
+            <marker date="1537945445752" expanded="true" signature="8152:8584" ph="..." />
+            <marker date="1537945445752" expanded="true" signature="9607:9610" ph="..." />
+            <marker date="1537945445752" expanded="true" signature="9737:11362" ph="..." />
           </folding>
         </state>
       </provider>
