@@ -2,7 +2,6 @@ from flask import request, Blueprint, jsonify, make_response
 import json
 import websocket
 import requests
-from bitshares.account import Account
 
 app = Blueprint('jct_api', __name__)
 
@@ -109,6 +108,7 @@ def sample_market():
         return error_handler(e, 400)
 
 
+# Accountの指定資産を取得する.
 @app.route('/v1/sample/balance', methods=['GET'])
 def sample_balance():
     try:
@@ -161,7 +161,15 @@ def get_balance(name, symbol):
         if uid is None:
             raise Exception("can not found user: {0}".format(name))
 
-        params = {"jsonrpc": "2.0", "method": "get_account_balances", "params": [uid, [symbol]], "id": 1}
+        assets = lookup_assets([symbol])
+        if assets is None or len(assets) < 1:
+            raise Exception("fail to get asset: {0}".format(symbol))
+
+        asset_id = assets[0].get("id")
+        if asset_id is None:
+            raise Exception("fail to get asset: {0}".format(asset_id))
+
+        params = {"jsonrpc": "2.0", "method": "get_account_balances", "params": [uid, [asset_id]], "id": 1}
         print(params)
 
         r = requests.post(url=node_rpc_url, data=json.dumps(params), timeout=30)
