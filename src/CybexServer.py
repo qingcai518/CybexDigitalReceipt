@@ -1,10 +1,11 @@
 from flask import Flask
 from flask_jwt_extended import JWTManager
 from common.Utility import *
-from api import CybexAPI
+from api import CybexAPI, JCTSample
 
 app = Flask(__name__)
 app.register_blueprint(CybexAPI.app)
+app.register_blueprint(JCTSample.app)
 
 app.config['JSON_AS_ASCII'] = False
 app.config["JSON_SORT_KEYS"] = False

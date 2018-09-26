@@ -108,7 +108,11 @@ def get_pairs():
     try:
         r = requests.get(url_paris)
         if r.status_code == 200:
-            return json.loads(r.text)
+            result = json.loads(r.text)
+            eth_paris = result.get("JADE.ETH")
+            eth_paris.append("JADE.JCT")
+            print(eth_paris)
+            return result
         else:
             raise Exception("fail to get assets pairs")
 
@@ -205,7 +209,8 @@ def get_trade_history(from_asset, to_asset, time):
 def get_market_history(from_id, to_id, time_type, start, end):
     try:
         ws = websocket.WebSocket()
-        ws.connect(NODE_RPC)
+        # ws.connect(NODE_RPC)
+        ws.connect("wss://tokyo-01.cybex.io/")  # dummy. 只能从主网获取k线信息.
 
         # 使用之前要先登陆和注册.
         login_param = {"id": 1, "method": "call", "params": [1, "login", ["",""]]}
