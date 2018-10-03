@@ -91,7 +91,7 @@ def main_balance():
         if name is None:
             return error_handler("have no user", 400)
 
-        symbols = ["CYB", "JADE.ETH", "JADE.BTC", "JADE.USDT", "JADE.JCT"]
+        symbols = ["CYB", "JADE.ETH", "JADE.BTC", "JADE.USDT", "JADE.JCT", "JADE.RCP", "JADE.BPT", "JADE.DPT"]
 
         result = {}
         for symbol in symbols:
