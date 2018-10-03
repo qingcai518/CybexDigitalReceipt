@@ -59,9 +59,22 @@ def account():
         return error_handler(msg, 400)
 
 
+@app.route('/v1/balances', methods=['GET'])
+def get_balances():
+    try:
+        name = request.args.get("name")
+        balances = get_balances()
+        print(balances)
+        return response(balances)
+    except Exception as e:
+        msg = e.args[len(e.args) - 1]
+        return error_handler(msg, 400)
+
+
+
 ## 获取指定名单的所有人的指定资产.
 @app.route('/v1/balances', methods=['POST'])
-def balances():
+def get_balances_by_name():
     request.environ['CONTENT_TYPE'] = 'application/json'
     try:
         data = request.get_json()

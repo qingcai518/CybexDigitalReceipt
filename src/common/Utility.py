@@ -104,6 +104,17 @@ def get_balance(name, symbol):
         return None
 
 
+##
+def get_balances(name):
+    try:
+        account = Account(name)
+        balances = account.balances
+        return balances
+    except Exception as e:
+        log.error(e)
+        return None
+
+
 def get_pairs():
     try:
         r = requests.get(url_paris)
