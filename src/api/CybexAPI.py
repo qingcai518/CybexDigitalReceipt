@@ -61,7 +61,7 @@ def account():
 
 ## 获取指定名单的所有资产.
 @app.route('/v1/balances', methods=['POST'])
-def get_balances_by_name():
+def get_balances():
     request.environ['CONTENT_TYPE'] = 'application/json'
     try:
         data = request.get_json()
