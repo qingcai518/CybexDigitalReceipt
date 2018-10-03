@@ -59,33 +59,6 @@ def account():
         return error_handler(msg, 400)
 
 
-## 获取指定名单的所有资产.
-@app.route('/v1/balances', methods=['POST'])
-def get_balances():
-    request.environ['CONTENT_TYPE'] = 'application/json'
-    try:
-        data = request.get_json()
-    except Exception:
-        return error_handler("参数形式错误")
-
-    names = data.get("names")
-    symbols = data.get("symbols")
-
-    if names is None or len(names)==0 or symbols is None or len(symbols) == 0:
-        return error_handler("param is not correct", 400)
-
-    result = {}
-    for name in names:
-        tokens = []
-        for symbol in symbols:
-            balance = get_balance(name, symbol)
-            if balance is None:
-                continue
-            tokens.append(balance.amount)
-        result[name] = tokens
-    return response(result)
-
-
 ## 获取指定账号的主流资产.
 @app.route('/v1/main_balance', methods=['GET'])
 def main_balance():
@@ -94,14 +67,23 @@ def main_balance():
         if name is None:
             return error_handler("have no user", 400)
 
-        symbols = ["CYB", "JADE.ETH", "JADE.BTC", "JADE.USDT", "JADE.JCT", "JADE.RCP", "JADE.BPT", "JADE.DPT"]
+        symbols = ["CYB", "JADE.ETH", "JADE.BTC", "JADE.USDT", "JADE.JCT", "RCP", "BPT", "DPT"]
 
-        result = {}
+        result = []
         for symbol in symbols:
             balance = get_balance(name, symbol)
             if balance is None:
                 continue
-            result[balance.symbol] = balance.amount
+            result.append({"symbol": balance.symbol, "amount": balance.amount})
+            # result.append(balance)
+        return response(result)
+
+        # result = {}
+        # for symbol in symbols:
+        #     balance = get_balance(name, symbol)
+        #     if balance is None:
+        #         continue
+        #     result[balance.symbol] = balance.amount
         return response(result)
     except Exception as e:
         msg = e.args[len(e.args) - 1]
