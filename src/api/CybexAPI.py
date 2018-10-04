@@ -41,7 +41,8 @@ def login():
         return error_handler("have no user name or password", 400)
 
     result = do_login(name, password)
-    return response(result)
+    json = {"result": result}
+    return json
 
 
 @app.route('/v1/signup', methods=['POST'])
