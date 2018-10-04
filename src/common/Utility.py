@@ -328,9 +328,16 @@ def do_transfer(from_uid, to_uid, asset, amount, lock_time, memo):
 # database access.
 def do_login(name, password):
     try:
-        user = User.get(
+        user = User.select(
+            User.name,
+            User.active_pub_key,
+            User.memo_pub_key,
+            User.owner_pub_key,
+            User.created_at,
+            User.update_at,
+        ).where(
             User.name == name,
-            User.password == fn.md5(password)
+            User.password == password
         )
 
         print(user)
