@@ -42,7 +42,7 @@ def login():
 
     result = do_login(name, password)
     json = {"result": result}
-    return json
+    return response(json)
 
 
 @app.route('/v1/signup', methods=['POST'])
