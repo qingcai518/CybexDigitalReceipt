@@ -26,6 +26,24 @@ def associate():
     return result
 
 
+@app.route('/v1/login', methods=['POST'])
+def login():
+    request.environ['CONTENT_TYPE'] = 'application/json'
+    try:
+        data = request.get_json()
+    except Exception:
+        return error_handler("参数形式错误")
+
+    name = data.get("name")
+    password = data.get("password")
+
+    if name is None or password is None:
+        return error_handler("have no user name or password", 400)
+
+    do_login(name, password)
+    return response("123")
+
+
 @app.route('/v1/signup', methods=['POST'])
 def signup():
     request.environ['CONTENT_TYPE'] = 'application/json'

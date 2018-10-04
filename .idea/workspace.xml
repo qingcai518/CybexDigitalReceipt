@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a09c62f0-cb85-4f15-b77e-74e981bdc903" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/CybexAPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/CybexAPI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Utility.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,13 +36,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="30" />
-          <entry key="py" value="19715" />
+          <entry key="py" value="20230" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="30" />
-          <entry key="Python" value="19715" />
+          <entry key="Python" value="20230" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -69,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api/CybexAPI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="78" column="31" lean-forward="true" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="31" />
+            <state relative-caret-position="288">
+              <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -81,17 +83,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="107" column="16" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="16" />
+            <state relative-caret-position="282">
+              <caret line="335" column="26" selection-start-line="335" selection-start-column="26" selection-end-line="335" selection-end-column="26" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
-                <marker date="1538550484294" expanded="true" signature="2968:3140" ph="..." />
-                <marker date="1538550484294" expanded="true" signature="8369:8801" ph="..." />
-                <marker date="1538550484294" expanded="true" signature="9824:9827" ph="..." />
-                <marker date="1538550484294" expanded="true" signature="9954:11579" ph="..." />
+                <marker date="1538633698313" expanded="true" signature="1429:1432" ph="..." />
+                <marker date="1538633698313" expanded="true" signature="2968:3140" ph="..." />
+                <marker date="1538633698313" expanded="true" signature="8369:8801" ph="..." />
+                <marker date="1538633698313" expanded="true" signature="9824:9827" ph="..." />
+                <marker date="1538633698313" expanded="true" signature="10217:11842" ph="..." />
               </folding>
             </state>
           </provider>
@@ -181,8 +184,8 @@
       <find>symbol</find>
       <find>symbols</find>
       <find>prinva</find>
-      <find>main_balance</find>
       <find>balance</find>
+      <find>main_balance</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -197,8 +200,8 @@
         <option value="$PROJECT_DIR$/src/common/Config.py" />
         <option value="$PROJECT_DIR$/src/CybexServer.py" />
         <option value="$PROJECT_DIR$/src/api/JCTSample.py" />
-        <option value="$PROJECT_DIR$/src/common/Utility.py" />
         <option value="$PROJECT_DIR$/src/api/CybexAPI.py" />
+        <option value="$PROJECT_DIR$/src/common/Utility.py" />
       </list>
     </option>
   </component>
@@ -382,20 +385,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="107" column="16" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-            <marker date="1538550484294" expanded="true" signature="2968:3140" ph="..." />
-            <marker date="1538550484294" expanded="true" signature="8369:8801" ph="..." />
-            <marker date="1538550484294" expanded="true" signature="9824:9827" ph="..." />
-            <marker date="1538550484294" expanded="true" signature="9954:11579" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CybexServer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -408,10 +397,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/api/CybexAPI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="78" column="31" lean-forward="true" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="31" />
+        <state relative-caret-position="288">
+          <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="335" column="26" selection-start-line="335" selection-start-column="26" selection-end-line="335" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+            <marker date="1538633698313" expanded="true" signature="1429:1432" ph="..." />
+            <marker date="1538633698313" expanded="true" signature="2968:3140" ph="..." />
+            <marker date="1538633698313" expanded="true" signature="8369:8801" ph="..." />
+            <marker date="1538633698313" expanded="true" signature="9824:9827" ph="..." />
+            <marker date="1538633698313" expanded="true" signature="10217:11842" ph="..." />
           </folding>
         </state>
       </provider>

@@ -326,6 +326,20 @@ def do_transfer(from_uid, to_uid, asset, amount, lock_time, memo):
 
 
 # database access.
+def do_login(name, password):
+    try:
+        result = User.select().where(
+            User.name == name,
+            User.password == fn.MD5(password)
+        )
+
+        print(len(result))
+
+    except Exception as e:
+        log.error(e)
+        return None
+
+
 def create_receipt(image_path, hash, receipt_at, tel, total_price, adjust_price, items):
     item_infos = []
     try:
