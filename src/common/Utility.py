@@ -331,8 +331,10 @@ def do_login(name, password):
         user = User.select().where(
             User.name == name,
             User.password == fn.MD5(password)
-        ).get()
-        print(user)
+        )
+
+        print(user.name)
+        print(user.password)
         return user
 
     except Exception as e:
