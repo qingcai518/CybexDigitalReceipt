@@ -337,8 +337,8 @@ def do_login(name, password):
             User.update_at,
         ).where(
             User.name == name,
-            User.password == password
-        )
+            User.password == fn.MD5(password)
+        ).get()
 
         print(user)
         return user
