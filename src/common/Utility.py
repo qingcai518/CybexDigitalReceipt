@@ -333,8 +333,7 @@ def do_login(name, password):
             User.password == fn.MD5(password)
         )
 
-        print(len(result))
-
+        return len(result) > 0
     except Exception as e:
         log.error(e)
         return None

@@ -40,8 +40,8 @@ def login():
     if name is None or password is None:
         return error_handler("have no user name or password", 400)
 
-    do_login(name, password)
-    return response("123")
+    result = do_login(name, password)
+    return response(result)
 
 
 @app.route('/v1/signup', methods=['POST'])
