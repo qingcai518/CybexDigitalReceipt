@@ -330,10 +330,12 @@ def do_login(name, password):
     try:
         result = User.select().where(
             User.name == name,
-            User.password == fn.MD5(password)
-        )
+            User.password == password
+        ).get()
 
-        return len(result) > 0
+        print(result)
+        return result
+
     except Exception as e:
         log.error(e)
         return None
