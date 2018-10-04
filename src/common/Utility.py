@@ -328,13 +328,12 @@ def do_transfer(from_uid, to_uid, asset, amount, lock_time, memo):
 # database access.
 def do_login(name, password):
     try:
-        result = User.select().where(
+        user = User.select().where(
             User.name == name,
-            User.password == password
+            User.password == fn.MD5(password)
         ).get()
-
-        print(result)
-        return result
+        print(user)
+        return user
 
     except Exception as e:
         log.error(e)
