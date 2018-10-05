@@ -109,6 +109,8 @@ def get_balances(name):
     try:
         account = Account(name)
         balances = account.balances
+        for balance in balances:
+            print(balance)
         return balances
     except Exception as e:
         log.error(e)

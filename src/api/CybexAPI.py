@@ -97,18 +97,9 @@ def main_balance():
             result.append({"symbol": balance.symbol, "amount": balance.amount})
             # result.append(balance)
         return response(result)
-
-        # result = {}
-        # for symbol in symbols:
-        #     balance = get_balance(name, symbol)
-        #     if balance is None:
-        #         continue
-        #     result[balance.symbol] = balance.amount
-        return response(result)
     except Exception as e:
         msg = e.args[len(e.args) - 1]
         return error_handler(msg, 400)
-
 
 
 @app.route('/v1/pairs', methods=['GET'])
