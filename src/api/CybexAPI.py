@@ -41,6 +41,8 @@ def login():
         return error_handler("have no user name or password", 400)
 
     result = do_login(name, password)
+    if result is None:
+        return error_handler("fail to login", 400)
     return response(result)
 
 

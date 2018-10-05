@@ -340,9 +340,17 @@ def do_login(name, password):
             User.password == fn.MD5(password)
         ).get()
 
-        print(user)
-        return user
+        if user is None:
+            raise Exception("fail to login")
 
+        result = {"name": user.name,
+                  "owner_pub_key": user.owner_pub_key,
+                  "active_pub_key": user.active_pub_key,
+                  "memo_pub_key": user.memo_pub_key,
+                  "created_at": user.created_at,
+                  "update_at": user.update_at
+                  }
+        return result
     except Exception as e:
         log.error(e)
         return None

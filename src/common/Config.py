@@ -7,8 +7,8 @@ db = PooledMySQLDatabase(
     # 'digital_receipt',
     max_connections=100,
     stale_timeout=500,
-    # **{'charset': 'utf8', 'use_unicode': True, 'host': 'localhost', 'user': 'root', 'password': 'BCTech_8888'}
-    **{'charset': 'utf8', 'use_unicode': True, 'host': 'localhost', 'user': 'root', 'password': 'Longhash_8888'}
+    **{'charset': 'utf8', 'use_unicode': True, 'host': '52.197.86.134', 'user': 'root', 'password': 'Longhash_8888'}
+    # **{'charset': 'utf8', 'use_unicode': True, 'host': 'localhost', 'user': 'root', 'password': 'Longhash_8888'}
 )
 
 # Block chain
