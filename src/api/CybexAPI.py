@@ -95,7 +95,6 @@ def main_balance():
             if balance is None:
                 continue
             result.append({"symbol": balance.symbol, "amount": balance.amount})
-            # result.append(balance)
         return response(result)
     except Exception as e:
         msg = e.args[len(e.args) - 1]

@@ -8,6 +8,7 @@ from bitshares.account import Account
 from db.DBModel import *
 from flask_caching import Cache
 import websocket
+from cybex import Asset, Market
 
 log = Logger("Cybex")
 cache = Cache()
@@ -325,6 +326,73 @@ def do_transfer(from_uid, to_uid, asset, amount, lock_time, memo):
     except Exception as e:
         log.error(e)
         return None
+
+
+def order(from_symbol, to_symbol, from_count, to_count):
+    try:
+        instance = BitShares(node=NODE_RPC, **{'prefix': 'cyb'})
+        instance.wallet.unlock(WALLET_PWD)
+
+        from_asset = Asset(from_symbol)
+        to_asset = Asset(to_symbol)
+        market = Market(base=from_asset, quote=to_asset, cybex_instance=instance)
+
+        buyer = 'receipt001'
+        admin = 'zhuanzhi518'
+
+        buy_result = market.buy(from_count, to_count, 3600, killfill=False, account=buyer)
+        sell_result = market.sell(from_count, to_count, 3600, killfill=False, account=admin)
+
+        print(buy_result)
+        print(sell_result)
+
+
+
+
+    except Exception as e:
+        print(e)
+        return error_handler(msg, 400)
+
+    try:
+        instance = BitShares(node=NODE_RPC, **{'prefix': 'cyb'})
+        instance.wallet.unlock(WALLET_PWD)
+
+        print("account name = {0}".format(name))
+        print("registrar = {0}".format(ADMIN_USER_ID))
+        print("password = {0}".format(password))
+
+        result = instance.create_account(
+            account_name=name,
+            registrar=ADMIN_USER_ID,
+            referrer=ADMIN_USER_ID,
+            referrer_percent=50,
+            password=password,
+            storekeys=False
+        )
+
+        print("result = {0}".format(result))
+
+        # add to user table.
+        try:
+            data = result["operations"][0][1]
+            owner_key = data["owner"]["key_auths"][0][0]
+            active_key = data["active"]["key_auths"][0][0]
+            memo_key = data["options"]["memo_key"]
+        except Exception:
+            print("can not get keys")
+
+        User.create(**{
+            "name": name,
+            "password": fn.md5(password),
+            "owner_pub_key": owner_key,
+            "active_pub_key": active_key,
+            "memo_pub_key": memo_key
+        })
+        return response(result)
+    except Exception as e:
+        print(e)
+        msg = e.args[len(e.args) - 1]
+        return error_handler(msg, 400)
 
 
 # database access.
