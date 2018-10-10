@@ -228,3 +228,27 @@ def get_account_id():
         return error_handler("fail to get user", 400)
 
     return response(user)
+
+
+
+@app.route('/v1/order', methods=['POST'])
+def do_order():
+    request.environ['CONTENT_TYPE'] = 'application/json'
+    try:
+        data = request.get_json()
+    except Exception:
+        return error_handler("参数形式错误")
+
+    from_symbol = data.get("from_symbol")
+    to_symbol = data.get("to_symbol")
+
+    from_count = data.get("from_count")
+    to_count = data.get("to_count")
+
+    uid = data.get("user_id")
+
+    if uid is None or from_symbol is None or to_symbol is None or from_count is None or to_count is None:
+        return error_handler("param not fill", 400)
+
+    order(from_symbol=from_symbol, to_symbol=to_symbol, from_count=from_count, to_count=to_count, uid=uid)
+    return response("hahaha")

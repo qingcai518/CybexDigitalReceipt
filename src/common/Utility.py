@@ -328,71 +328,29 @@ def do_transfer(from_uid, to_uid, asset, amount, lock_time, memo):
         return None
 
 
-def order(from_symbol, to_symbol, from_count, to_count):
+def order(from_symbol, to_symbol, from_count, to_count, uid):
     try:
+        print("000000")
         instance = BitShares(node=NODE_RPC, **{'prefix': 'cyb'})
         instance.wallet.unlock(WALLET_PWD)
 
+        print("111111")
         from_asset = Asset(from_symbol)
         to_asset = Asset(to_symbol)
+        print("2222222")
         market = Market(base=from_asset, quote=to_asset, cybex_instance=instance)
 
-        buyer = 'receipt001'
-        admin = 'zhuanzhi518'
+        print(from_symbol, to_symbol, from_count, to_count)
 
-        buy_result = market.buy(from_count, to_count, 3600, killfill=False, account=buyer)
-        sell_result = market.sell(from_count, to_count, 3600, killfill=False, account=admin)
+        buy_result = market.buy(from_count, to_count, 3600, killfill=False, account=uid)
+        sell_result = market.sell(from_count, to_count, 3600, killfill=False, account=ADMIN_USER)
 
         print(buy_result)
         print(sell_result)
 
-
-
-
     except Exception as e:
         print(e)
-        return error_handler(msg, 400)
-
-    try:
-        instance = BitShares(node=NODE_RPC, **{'prefix': 'cyb'})
-        instance.wallet.unlock(WALLET_PWD)
-
-        print("account name = {0}".format(name))
-        print("registrar = {0}".format(ADMIN_USER_ID))
-        print("password = {0}".format(password))
-
-        result = instance.create_account(
-            account_name=name,
-            registrar=ADMIN_USER_ID,
-            referrer=ADMIN_USER_ID,
-            referrer_percent=50,
-            password=password,
-            storekeys=False
-        )
-
-        print("result = {0}".format(result))
-
-        # add to user table.
-        try:
-            data = result["operations"][0][1]
-            owner_key = data["owner"]["key_auths"][0][0]
-            active_key = data["active"]["key_auths"][0][0]
-            memo_key = data["options"]["memo_key"]
-        except Exception:
-            print("can not get keys")
-
-        User.create(**{
-            "name": name,
-            "password": fn.md5(password),
-            "owner_pub_key": owner_key,
-            "active_pub_key": active_key,
-            "memo_pub_key": memo_key
-        })
-        return response(result)
-    except Exception as e:
-        print(e)
-        msg = e.args[len(e.args) - 1]
-        return error_handler(msg, 400)
+        return None
 
 
 # database access.
