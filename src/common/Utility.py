@@ -330,17 +330,12 @@ def do_transfer(from_uid, to_uid, asset, amount, lock_time, memo):
 
 def order(from_symbol, to_symbol, from_count, to_count, uid):
     try:
-        print("000000")
         instance = BitShares(node=NODE_RPC, **{'prefix': 'cyb'})
         instance.wallet.unlock(WALLET_PWD)
 
-        print("111111")
         from_asset = Asset(from_symbol)
         to_asset = Asset(to_symbol)
-        print("2222222")
         market = Market(base=from_asset, quote=to_asset, cybex_instance=instance)
-
-        print(from_symbol, to_symbol, from_count, to_count)
 
         buy_result = market.buy(from_count, to_count, 3600, killfill=False, account=uid)
         sell_result = market.sell(from_count, to_count, 3600, killfill=False, account=ADMIN_USER)
