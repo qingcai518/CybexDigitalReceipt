@@ -230,7 +230,6 @@ def get_account_id():
     return response(user)
 
 
-
 @app.route('/v1/order', methods=['POST'])
 def do_order():
     request.environ['CONTENT_TYPE'] = 'application/json'
@@ -252,3 +251,14 @@ def do_order():
 
     order(from_symbol=from_symbol, to_symbol=to_symbol, from_count=from_count, to_count=to_count, uid=uid)
     return response("hahaha")
+
+
+@app.route('/v1/chain', methods=['GET'])
+def chain():
+    try:
+        result = get_chain_properties()
+        return response(result)
+    except Exception as e:
+        msg = e.args[len(e.args) - 1]
+        return error_handler(msg, 400)
+
