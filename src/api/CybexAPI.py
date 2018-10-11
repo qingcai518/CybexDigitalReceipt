@@ -92,9 +92,25 @@ def main_balance():
         result = []
         for symbol in symbols:
             balance = get_balance(name, symbol)
+            print(balance)
             if balance is None:
                 continue
+
             result.append({"symbol": balance.symbol, "amount": balance.amount})
+        return response(result)
+    except Exception as e:
+        msg = e.args[len(e.args) - 1]
+        return error_handler(msg, 400)
+
+
+@app.route('/v1/account_balances', methods=['GET'])
+def account_balances():
+    try:
+        # name = request.args.get("name")
+        # if name is None:
+        #     return error_handler("have no user", 400)
+
+        result = get_named_account_balances()
         return response(result)
     except Exception as e:
         msg = e.args[len(e.args) - 1]

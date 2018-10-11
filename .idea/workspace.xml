@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a09c62f0-cb85-4f15-b77e-74e981bdc903" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/CybexAPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/CybexAPI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/Utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Utility.py" afterDir="false" />
     </list>
@@ -25,24 +26,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="21" />
+          <entry key="py" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="21" />
+          <entry key="Python" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="30" />
-          <entry key="py" value="25434" />
+          <entry key="py" value="25648" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="30" />
-          <entry key="Python" value="25434" />
+          <entry key="Python" value="25648" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -74,12 +75,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/api/CybexAPI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="258" column="46" selection-start-line="258" selection-start-column="46" selection-end-line="258" selection-end-column="46" />
+            <state relative-caret-position="356">
+              <caret line="108" selection-start-line="108" selection-end-line="110" selection-end-column="55" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
-                <marker date="1539245532857" expanded="true" signature="2748:2749" ph="..." />
-                <marker date="1539245532857" expanded="true" signature="7031:7227" ph="..." />
+                <marker date="1539246438894" expanded="true" signature="2852:3172" ph="..." />
+                <marker date="1539246438894" expanded="true" signature="3171:3172" ph="..." />
+                <marker date="1539246438894" expanded="true" signature="7454:7650" ph="..." />
               </folding>
             </state>
           </provider>
@@ -88,16 +90,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="350" column="33" selection-start-line="350" selection-start-column="4" selection-end-line="350" selection-end-column="33" />
+            <state relative-caret-position="403">
+              <caret line="364" column="30" selection-start-line="364" selection-start-column="4" selection-end-line="364" selection-end-column="30" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
-                <marker date="1539245524299" expanded="true" signature="1461:1464" ph="..." />
-                <marker date="1539245524299" expanded="true" signature="3000:3232" ph="..." />
-                <marker date="1539245524299" expanded="true" signature="8461:8893" ph="..." />
-                <marker date="1539245524299" expanded="true" signature="10602:11056" ph="..." />
-                <marker date="1539245524299" expanded="true" signature="11053:11056" ph="..." />
-                <marker date="1539245524299" expanded="true" signature="12017:13642" ph="..." />
+                <marker date="1539246363021" expanded="true" signature="1461:1464" ph="..." />
+                <marker date="1539246363021" expanded="true" signature="3000:3232" ph="..." />
+                <marker date="1539246363021" expanded="true" signature="8461:8893" ph="..." />
+                <marker date="1539246363021" expanded="true" signature="10602:11573" ph="..." />
+                <marker date="1539246363021" expanded="true" signature="11570:11573" ph="..." />
+                <marker date="1539246363021" expanded="true" signature="12534:14159" ph="..." />
               </folding>
             </state>
           </provider>
@@ -156,7 +158,6 @@
       <find>symbols</find>
       <find>prinva</find>
       <find>balance</find>
-      <find>main_balance</find>
       <find>select(</find>
       <find>do_login</find>
       <find>content</find>
@@ -168,6 +169,7 @@
       <find>from_symbol</find>
       <find>instance</find>
       <find>log</find>
+      <find>main_balance</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -379,30 +381,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.pyenv/versions/3.6.5/lib/python3.6/site-packages/bitshares/account.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="100" column="8" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="350" column="33" selection-start-line="350" selection-start-column="4" selection-end-line="350" selection-end-column="33" />
+        <state relative-caret-position="403">
+          <caret line="364" column="30" selection-start-line="364" selection-start-column="4" selection-end-line="364" selection-end-column="30" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
-            <marker date="1539245524299" expanded="true" signature="1461:1464" ph="..." />
-            <marker date="1539245524299" expanded="true" signature="3000:3232" ph="..." />
-            <marker date="1539245524299" expanded="true" signature="8461:8893" ph="..." />
-            <marker date="1539245524299" expanded="true" signature="10602:11056" ph="..." />
-            <marker date="1539245524299" expanded="true" signature="11053:11056" ph="..." />
-            <marker date="1539245524299" expanded="true" signature="12017:13642" ph="..." />
+            <marker date="1539246363021" expanded="true" signature="1461:1464" ph="..." />
+            <marker date="1539246363021" expanded="true" signature="3000:3232" ph="..." />
+            <marker date="1539246363021" expanded="true" signature="8461:8893" ph="..." />
+            <marker date="1539246363021" expanded="true" signature="10602:11573" ph="..." />
+            <marker date="1539246363021" expanded="true" signature="11570:11573" ph="..." />
+            <marker date="1539246363021" expanded="true" signature="12534:14159" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/api/CybexAPI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="258" column="46" selection-start-line="258" selection-start-column="46" selection-end-line="258" selection-end-column="46" />
+        <state relative-caret-position="356">
+          <caret line="108" selection-start-line="108" selection-end-line="110" selection-end-column="55" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
-            <marker date="1539245532857" expanded="true" signature="2748:2749" ph="..." />
-            <marker date="1539245532857" expanded="true" signature="7031:7227" ph="..." />
+            <marker date="1539246438894" expanded="true" signature="2852:3172" ph="..." />
+            <marker date="1539246438894" expanded="true" signature="3171:3172" ph="..." />
+            <marker date="1539246438894" expanded="true" signature="7454:7650" ph="..." />
           </folding>
         </state>
       </provider>
