@@ -256,7 +256,7 @@ def do_order():
 @app.route('/v1/chain', methods=['GET'])
 def chain():
     try:
-        result = get_chain_properties()
+        result = get_dynamic_global_properties()
         return response(result)
     except Exception as e:
         msg = e.args[len(e.args) - 1]

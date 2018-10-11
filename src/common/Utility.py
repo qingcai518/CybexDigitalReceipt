@@ -348,9 +348,9 @@ def order(from_symbol, to_symbol, from_count, to_count, uid):
         return None
 
 
-def get_chain_properties():
+def get_dynamic_global_properties():
     try:
-        param = {"jsonrpc": "2.0", "method": "get_chain_properties", "params": [], "id": 1}
+        param = {"jsonrpc": "2.0", "method": "get_dynamic_global_properties", "params": [], "id": 1}
         r = requests.post(url=NODE_RPC_URL, data=json.dumps(param), timeout=30)
 
         if r.status_code != 200:
