@@ -265,8 +265,11 @@ def do_order():
     if uid is None or from_symbol is None or to_symbol is None or from_count is None or to_count is None:
         return error_handler("param not fill", 400)
 
-    order(from_symbol=from_symbol, to_symbol=to_symbol, from_count=from_count, to_count=to_count, uid=uid)
-    return response("hahaha")
+    try:
+        result = order(from_symbol=from_symbol, to_symbol=to_symbol, from_count=from_count, to_count=to_count, uid=uid)
+        return response(result)
+    except Exception as e:
+        return error_handler(e, 400)
 
 
 @app.route('/v1/chain', methods=['GET'])

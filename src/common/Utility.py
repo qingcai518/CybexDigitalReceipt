@@ -340,9 +340,7 @@ def order(from_symbol, to_symbol, from_count, to_count, uid):
         buy_result = market.buy(from_count, to_count, 3600, killfill=False, account=uid)
         sell_result = market.sell(from_count, to_count, 3600, killfill=False, account=ADMIN_USER)
 
-        print(buy_result)
-        print(sell_result)
-
+        return {"buy_result": buy_result, "sell_result": sell_result}
     except Exception as e:
         print(e)
         return None
