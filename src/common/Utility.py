@@ -359,6 +359,20 @@ def order(from_symbol, to_symbol, from_count, to_count, uid):
         return None
 
 
+def broadcast(tx):
+    try:
+        instance = BitShares(node=NODE_RPC, **{'prefix': 'cyb'})
+        instance.wallet.unlock(WALLET_PWD)
+
+        result = instance.broadcast(tx)
+
+        print(result)
+        return result
+    except Exception as e:
+        print(e)
+        return None
+
+
 def get_dynamic_global_properties():
     try:
         param = {"jsonrpc": "2.0", "method": "get_dynamic_global_properties", "params": [], "id": 1}

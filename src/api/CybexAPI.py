@@ -285,6 +285,25 @@ def do_order():
         return error_handler(e, 400)
 
 
+@app.route('/v1/broadcast', methods=['POST'])
+def do_broadcast():
+    request.environ['CONTENT_TYPE'] = 'application/json'
+    try:
+        data = request.get_json()
+    except Exception:
+        return error_handler("参数形式错误")
+
+    tx = data.get("transaction")
+    if tx is None:
+        return error_handler("fail to get transaction.")
+
+    try:
+        result = broadcast(tx)
+        return response(result)
+    except Exception as e:
+        return error_handler(e, 400)
+
+
 @app.route('/v1/chain', methods=['GET'])
 def chain():
     try:
