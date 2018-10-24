@@ -36,13 +36,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="30" />
-          <entry key="py" value="26880" />
+          <entry key="py" value="26906" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="30" />
-          <entry key="Python" value="26880" />
+          <entry key="Python" value="26906" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -74,13 +74,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/api/CybexAPI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="141" column="19" selection-start-line="141" selection-start-column="19" selection-end-line="141" selection-end-column="19" />
+            <state relative-caret-position="348">
+              <caret line="150" column="25" selection-start-line="150" selection-start-column="25" selection-end-line="150" selection-end-column="25" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
-                <marker date="1540360770851" expanded="true" signature="2852:4061" ph="..." />
-                <marker date="1540360770851" expanded="true" signature="4058:4061" ph="..." />
-                <marker date="1540360770851" expanded="true" signature="4060:4061" ph="..." />
+                <marker date="1540360948182" expanded="true" signature="2852:4026" ph="..." />
+                <marker date="1540360948182" expanded="true" signature="4023:4026" ph="..." />
+                <marker date="1540360948182" expanded="true" signature="4025:4026" ph="..." />
               </folding>
             </state>
           </provider>
@@ -419,13 +419,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/api/CybexAPI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="141" column="19" selection-start-line="141" selection-start-column="19" selection-end-line="141" selection-end-column="19" />
+        <state relative-caret-position="348">
+          <caret line="150" column="25" selection-start-line="150" selection-start-column="25" selection-end-line="150" selection-end-column="25" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
-            <marker date="1540360770851" expanded="true" signature="2852:4061" ph="..." />
-            <marker date="1540360770851" expanded="true" signature="4058:4061" ph="..." />
-            <marker date="1540360770851" expanded="true" signature="4060:4061" ph="..." />
+            <marker date="1540360948182" expanded="true" signature="2852:4026" ph="..." />
+            <marker date="1540360948182" expanded="true" signature="4023:4026" ph="..." />
+            <marker date="1540360948182" expanded="true" signature="4025:4026" ph="..." />
           </folding>
         </state>
       </provider>
