@@ -135,11 +135,11 @@ def get_account_id():
 def get_assets():
     request.environ['CONTENT_TYPE'] = 'application/json'
     try:
-        data = request.get_json()
+        params = request.get_json()
     except Exception:
         return error_handler("参数形式错误")
 
-    assets = data.get("assets")
+    assets = params.get("assets")
     if assets is None or len(assets) == 0:
         return error_handler("have no assets", 400)
 
