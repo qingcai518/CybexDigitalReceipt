@@ -285,7 +285,8 @@ def chain():
 @app.route('/v1/chain_id', methods=['GET'])
 def chain_id():
     try:
-        result = get_chain_id()
+        chain_id = get_chain_id()
+        result = {"chain_id": chain_id}
         return response(result)
     except Exception as e:
         msg = e.args[len(e.args) - 1]
