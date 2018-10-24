@@ -283,7 +283,7 @@ def chain():
 
 
 @app.route('/v1/chain_id', methods=['GET'])
-def chain():
+def chain_id():
     try:
         result = get_chain_id()
         return response(result)
