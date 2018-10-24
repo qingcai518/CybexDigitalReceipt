@@ -98,11 +98,8 @@ def create_account(name, password):
 ##
 def get_balance(name, symbol):
     try:
-        print("account name = {0}".format(name))
         account = Account(name)
-        print("1111111")
         balance = account.balance(symbol)
-        print("2222222")
         return balance
     except Exception as e:
         log.error(e)
