@@ -144,6 +144,11 @@ def get_assets():
         return error_handler("have no assets", 400)
 
     data = lookup_asset_symbols(assets)
+    result = data.get("result")
+    if result is None:
+        return error_handler("have no result", 400)
+
+    return response(result)
 
 
 @app.route('/v1/pairs', methods=['GET'])
