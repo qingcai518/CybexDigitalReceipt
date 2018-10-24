@@ -131,6 +131,21 @@ def get_account_id():
         return error_handler(msg, 400)
 
 
+@app.route('v1/asset_id', methods=['POST'])
+def get_assets():
+    request.environ['CONTENT_TYPE'] = 'application/json'
+    try:
+        data = request.get_json()
+    except Exception:
+        return error_handler("参数形式错误")
+
+    assets = data.get("assets")
+    if assets is None or len(assets) == 0:
+        return error_handler("have no assets", 400)
+
+    data = lookup_asset_symbols(assets)
+
+
 @app.route('/v1/pairs', methods=['GET'])
 def pairs():
     result = get_pairs()

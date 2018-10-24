@@ -281,6 +281,16 @@ def get_user(user_id):
         log.error(e)
 
 
+def lookup_asset_symbols(assets):
+    params = {"jsonrpc": "2.0", "method": "lookup_asset_symbols", "params": [assets], "id": 1}
+    r = requests.post(url=NODE_RPC_URL, data=json.dumps(params), timeout=30)
+
+    if r.status_code != 200:
+        raise Exception("fail to get user info")
+
+    return json.loads(r.text).get("result")
+
+
 def get_user_pub_key(uid):
     try:
         user = get_user(uid)
