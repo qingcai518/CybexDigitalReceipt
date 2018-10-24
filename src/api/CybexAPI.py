@@ -288,7 +288,10 @@ def do_order():
 @app.route('/v1/chain', methods=['GET'])
 def chain():
     try:
-        result = get_dynamic_global_properties()
+        data = get_dynamic_global_properties()
+        result = data.get("result")
+        if result is None:
+            return error_handler("fail to get result", 400)
         return response(result)
     except Exception as e:
         msg = e.args[len(e.args) - 1]
