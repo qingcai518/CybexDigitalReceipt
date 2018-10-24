@@ -53,6 +53,7 @@ def get_chain_id():
 
 def create_account(name, password):
     try:
+        print("1111111")
         instance = BitShares(node=NODE_RPC, **{'prefix': 'cyb'})
         instance.wallet.unlock(WALLET_PWD)
 
