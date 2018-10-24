@@ -16,6 +16,7 @@ NODE_RPC_URL = 'https://hangzhou.51nebula.com/'
 WALLET_PWD = 'longhash'
 NODE_RPC = 'wss://hangzhou.51nebula.com/'    # 用测试链无法取到chart用的信息.
 
+
 # main net.
 # NODE_RPC_URL = 'https://tokyo-01.cybex.io/'
 # WALLET_PWD = '123456'
