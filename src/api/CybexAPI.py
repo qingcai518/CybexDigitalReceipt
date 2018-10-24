@@ -131,7 +131,7 @@ def get_account_id():
         return error_handler(msg, 400)
 
 
-@app.route('v1/asset_id', methods=['POST'])
+@app.route('/v1/assets', methods=['POST'])
 def get_assets():
     request.environ['CONTENT_TYPE'] = 'application/json'
     try:
