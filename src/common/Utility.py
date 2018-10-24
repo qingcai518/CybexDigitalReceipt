@@ -352,12 +352,26 @@ def get_dynamic_global_properties():
         r = requests.post(url=NODE_RPC_URL, data=json.dumps(param), timeout=30)
 
         if r.status_code != 200:
-            raise Exception("fail to get trade history by sequence")
+            raise Exception("fail to get dynamic global properties.")
 
         return json.loads(r.text)
     except Exception as e:
         msg = e.args[len(e.args) - 1]
         log.error("fail to get properties id {0}".format(msg))
+
+
+def get_chain_id():
+    try:
+        param = {"jsonrpc": "2.0", "method": "get_chain_id", "params": [], "id": 1}
+        r = requests.post(url=NODE_RPC_URL, data=json.dumps(param), timeout=30)
+
+        if r.status_code != 200:
+            raise Exception("fail to get chain id.")
+
+        return json.loads(r.text)
+    except Exception as e:
+        msg = e.args[len(e.args) - 1]
+        log.error("fail to get chain id {0}".format(msg))
 
 
 def get_named_account_balances():

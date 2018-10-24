@@ -281,3 +281,13 @@ def chain():
         msg = e.args[len(e.args) - 1]
         return error_handler(msg, 400)
 
+
+@app.route('/v1/chain_id', methods=['GET'])
+def chain():
+    try:
+        result = get_chain_id()
+        return response(result)
+    except Exception as e:
+        msg = e.args[len(e.args) - 1]
+        return error_handler(msg, 400)
+
