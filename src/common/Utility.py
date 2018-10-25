@@ -409,7 +409,7 @@ def ws_transfer(from_name, to_name, private_key, amount, symbol, memo):
         # 连接wallet 并解锁.
         # ws = create_connection(NODE_RPC)
         ws = create_connection("ws://127.0.0.1:8091")
-        req = {"id": 2, "method": "call", "params": [0, "unlock", ["123456"]]}
+        req = {"id": 2, "method": "call", "params": [0, "unlock", ["longhash"]]}
         ws.send(json.dumps(req, sort_keys=True))
         print("return: \n" + ws.recv())
 
