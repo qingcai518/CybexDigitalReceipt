@@ -407,7 +407,8 @@ def ws_transfer(from_name, to_name, private_key, amount, symbol, memo):
     try:
         print("连接wallet并解锁钱包")
         # 连接wallet 并解锁.
-        ws = create_connection(NODE_RPC)
+        # ws = create_connection(NODE_RPC)
+        ws = create_connection("ws://127.0.0.1:8091")
         req = {"id": 2, "method": "call", "params": [0, "unlock", ["123456"]]}
         ws.send(json.dumps(req, sort_keys=True))
         print("return: \n" + ws.recv())
@@ -415,7 +416,7 @@ def ws_transfer(from_name, to_name, private_key, amount, symbol, memo):
         # 导入私钥.
         print("导入私钥")
         import_req = {"id": 3, "method": "call", "params":[0, "import_key", [from_name, private_key]]}
-        ws.send(json.dumps(import_req, sort_key=True))
+        ws.send(json.dumps(import_req, sort_keys=True))
         print("return: \n" + ws.recv())
 
         # 转账.
