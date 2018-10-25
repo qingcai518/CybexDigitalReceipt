@@ -327,3 +327,31 @@ def chain_id():
         msg = e.args[len(e.args) - 1]
         return error_handler(msg, 400)
 
+
+@app.route('/v1/transfer', methods=['POST'])
+def transfer():
+    request.environ["CONTENT_TYPE"] = "application/json"
+    try:
+        data = request.get_json()
+    except Exception:
+        return error_handler("参数形式错误")
+
+    from_name = data.get("from_name")
+    to_name = data.get("to_name")
+    private_key = data.get("private_key")
+    amount = data.get("amount")
+    symbol = data.get("symbol")
+    print(from_name)
+    print(to_name)
+    print(private_key)
+    print(amount)
+    print(symbol)
+
+    try:
+        result = ws_transfer(from_name=from_name, to_name=to_name, amount=amount, symbol=symbol, private_key=private_key)
+        return response(result)
+    except Exception as e:
+        return error_handler(e, 400)
+
+
+

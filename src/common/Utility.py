@@ -8,6 +8,7 @@ from bitshares.account import Account
 from db.DBModel import *
 from flask_caching import Cache
 import websocket
+from websocket import create_connection
 from cybex import Asset, Market
 
 log = Logger("Cybex")
@@ -399,6 +400,31 @@ def get_named_account_balances():
     except Exception as e:
         msg = e.args[len(e.args) - 1]
         log.error("fail to get account balances id {0}".format(msg))
+
+
+# websocket连接.
+def ws_transfer(from_name, to_name, private_key, amount, symbol, memo):
+    try:
+        # 连接wallet 并解锁.
+        ws = create_connection(NODE_RPC)
+        req = {"id": 2, "method": "call", "params": [0, "unlock", ["longhash"]]}
+        ws.send(json.dmps(req, sort_keys=True))
+        print("return: \n" + ws.recv())
+
+        # 导入私钥.
+        import_req = {"id": 3, "method": "call", "params":[0, "import_key", [from_name, private_key]]}
+        ws.send(json.dumps(import_req, sort_key=True))
+        print("return: \n" + ws.recv())
+
+        # 转账.
+        transfer_req = {"id": 6, "method" : "call", "params": [0, "transfer", [from_name, to_name, amount, symbol, memo, True]]}
+        ws.send(json.dumps(transfer_req, sort_keys=True))
+        print("return:\n" + ws.recv())
+
+    except Exception as e:
+        log.error(e)
+        return None
+
 
 
 # database access.
