@@ -430,7 +430,6 @@ def ws_transfer(from_name, to_name, private_key, amount, symbol, memo):
         return None
 
 
-
 # database access.
 def do_login(name, password):
     try:

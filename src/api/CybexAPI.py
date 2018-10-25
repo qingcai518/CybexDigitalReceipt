@@ -341,14 +341,17 @@ def transfer():
     private_key = data.get("private_key")
     amount = data.get("amount")
     symbol = data.get("symbol")
-    print(from_name)
-    print(to_name)
-    print(private_key)
-    print(amount)
-    print(symbol)
+    memo = data.get("memo")
+
+    print("from name = {0}".format(from_name))
+    print("to name = {0}".format(to_name))
+    print("private key = {0}".format(private_key))
+    print("amount = {0}".format(amount))
+    print("symbol = {0}".format(symbol))
+    print("memo = {0}".format(memo))
 
     try:
-        result = ws_transfer(from_name=from_name, to_name=to_name, amount=amount, symbol=symbol, private_key=private_key)
+        result = ws_transfer(from_name=from_name, to_name=to_name, amount=amount, symbol=symbol, private_key=private_key, memo=memo)
         return response(result)
     except Exception as e:
         return error_handler(e, 400)
