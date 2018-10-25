@@ -405,18 +405,22 @@ def get_named_account_balances():
 # websocket连接.
 def ws_transfer(from_name, to_name, private_key, amount, symbol, memo):
     try:
+        print("连接wallet并解锁钱包")
         # 连接wallet 并解锁.
         ws = create_connection(NODE_RPC)
-        req = {"id": 2, "method": "call", "params": [0, "unlock", ["longhash"]]}
+        req = {"id": 2, "method": "call", "params": [0, "unlock", ["123456"]]}
+        print("发送请求 ")
         ws.send(json.dmps(req, sort_keys=True))
         print("return: \n" + ws.recv())
 
         # 导入私钥.
+        print("导入私钥")
         import_req = {"id": 3, "method": "call", "params":[0, "import_key", [from_name, private_key]]}
         ws.send(json.dumps(import_req, sort_key=True))
         print("return: \n" + ws.recv())
 
         # 转账.
+        print("转账")
         transfer_req = {"id": 6, "method" : "call", "params": [0, "transfer", [from_name, to_name, amount, symbol, memo, True]]}
         ws.send(json.dumps(transfer_req, sort_keys=True))
         print("return:\n" + ws.recv())
