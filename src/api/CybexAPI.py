@@ -296,7 +296,7 @@ def do_broadcast():
     tx = data.get("transaction")
     if tx is None:
         return error_handler("fail to get transaction.")
-    
+
     try:
         result = broadcast(tx)
         return response(result)
@@ -339,6 +339,7 @@ def transfer():
     from_name = data.get("from_name")
     to_name = data.get("to_name")
     private_key = data.get("private_key")
+    public_key = data.get("public_key")
     amount = data.get("amount")
     symbol = data.get("symbol")
     memo = data.get("memo")
@@ -346,12 +347,15 @@ def transfer():
     print("from name = {0}".format(from_name))
     print("to name = {0}".format(to_name))
     print("private key = {0}".format(private_key))
+    print("public key = {0}".format(public_key))
     print("amount = {0}".format(amount))
     print("symbol = {0}".format(symbol))
     print("memo = {0}".format(memo))
 
     try:
-        result = ws_transfer(from_name=from_name, to_name=to_name, amount=amount, symbol=symbol, private_key=private_key, memo=memo)
+        # result = ws_transfer(from_name=from_name, to_name=to_name, amount=amount, symbol=symbol, private_key=private_key, memo=memo)
+        # return response(result)
+        result = wallet_transfer(from_name=from_name, to_name=to_name, amount=amount, symbol=symbol, private_key=private_key, public_key=public_key, memo=memo)
         return response(result)
     except Exception as e:
         return error_handler(e, 400)
