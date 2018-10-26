@@ -363,7 +363,11 @@ def order(from_symbol, to_symbol, from_count, to_count, uid):
 def broadcast(tx):
     try:
         params = {"jsonrpc": "2.0", "method": "broadcast_transaction_with_callback", "params": [tx], "id": 1}
-        r = requests.post(url=NODE_RPC_URL, data=json.dumps(params), timeout=30)
+
+        data = json.dumps(params)
+        print(data)
+
+        r = requests.post(url=NODE_RPC_URL, data=data, timeout=30)
 
         if r.status_code != 200:
             raise Exception("fail to get user info")

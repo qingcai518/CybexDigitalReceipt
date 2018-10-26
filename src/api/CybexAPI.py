@@ -296,9 +296,7 @@ def do_broadcast():
     tx = data.get("transaction")
     if tx is None:
         return error_handler("fail to get transaction.")
-
-    print(tx)
-
+    
     try:
         result = broadcast(tx)
         return response(result)
