@@ -368,7 +368,7 @@ def broadcast(tx):
         # 使用之前要先登陆和注册.
         login_param = {"id": 1, "method": "call", "params": [1, "login", ["",""]]}
         register_param = {"id": 2, "method": "call", "params": [1, "network_broadcast", []]}
-        param = {"id": 3, "method": "call", "params": [2, "broadcast_transaction", [json.dumps(tx)]]}
+        param = {"id": 3, "method": "call", "params": [2, "broadcast_transaction", [tx]]}
         print(json.dumps(param))
 
         ws.send(json.dumps(login_param))
