@@ -353,8 +353,6 @@ def transfer():
     print("memo = {0}".format(memo))
 
     try:
-        # result = ws_transfer(from_name=from_name, to_name=to_name, amount=amount, symbol=symbol, private_key=private_key, memo=memo)
-        # return response(result)
         result = wallet_transfer(from_name=from_name, to_name=to_name, amount=amount, symbol=symbol, private_key=private_key, public_key=public_key, memo=memo)
         return response(result)
     except Exception as e:

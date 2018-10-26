@@ -440,17 +440,18 @@ def ws_transfer(from_name, to_name, private_key, amount, symbol, memo):
 # 钱包方式转账.
 def wallet_transfer(from_name, to_name, private_key, public_key, amount, symbol, memo):
     try:
+        log.info("解锁钱包")
         instance = BitShares(node=NODE_RPC, **{'prefix': 'cyb'})
         instance.wallet.unlock(WALLET_PWD)
 
-        # 登陆用户私钥.
-        instance.wallet.addPrivateKey(private_key)
+        log.info("登陆用户私钥")
+        # instance.wallet.addPrivateKey(private_key)
 
-        # 转账.
+        log.info("转账")
         from_account = Account(from_name, bitshares_instance=instance)
         result = instance.transfer(to=to_name, amount=amount, asset=symbol, memo=memo, account=from_account)
 
-        # 注销用户私钥.
+        log.info("注销用户私钥")
         instance.wallet.removePrivateKeyFromPublicKey(public_key)
 
         print(result)
