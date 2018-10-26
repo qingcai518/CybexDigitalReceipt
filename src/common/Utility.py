@@ -445,7 +445,7 @@ def wallet_transfer(from_name, to_name, private_key, public_key, amount, symbol,
         instance.wallet.unlock(WALLET_PWD)
 
         log.info("登陆用户私钥")
-        # instance.wallet.addPrivateKey(private_key)
+        instance.wallet.addPrivateKey(private_key)
 
         log.info("转账")
         from_account = Account(from_name, bitshares_instance=instance)
