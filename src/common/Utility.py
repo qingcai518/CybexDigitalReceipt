@@ -370,6 +370,7 @@ def broadcast(tx):
 
         return json.loads(r.text).get("result")
     except Exception as e:
+        print("error ==== {0}".format(e))
         log.error(e)
 
 
