@@ -368,6 +368,9 @@ def broadcast(tx):
         if r.status_code != 200:
             raise Exception("fail to get user info")
 
+        result = r.text
+        print(result)
+
         return json.loads(r.text).get("result")
     except Exception as e:
         print("error ==== {0}".format(e))
