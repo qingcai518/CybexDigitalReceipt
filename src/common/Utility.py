@@ -362,16 +362,15 @@ def order(from_symbol, to_symbol, from_count, to_count, uid):
 
 def broadcast(tx):
     try:
-        instance = BitShares(node=NODE_RPC, **{'prefix': 'cyb'})
-        instance.wallet.unlock(WALLET_PWD)
+        params = {"jsonrpc": "2.0", "method": "broadcast_transaction_with_callback", "params": [tx], "id": 1}
+        r = requests.post(url=NODE_RPC_URL, data=json.dumps(params), timeout=30)
 
-        result = instance.broadcast(tx)
+        if r.status_code != 200:
+            raise Exception("fail to get user info")
 
-        print(result)
-        return result
+        return json.loads(r.text).get("result")
     except Exception as e:
-        print(e)
-        return None
+        log.error(e)
 
 
 def get_dynamic_global_properties():

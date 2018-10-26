@@ -297,6 +297,8 @@ def do_broadcast():
     if tx is None:
         return error_handler("fail to get transaction.")
 
+    print(tx)
+
     try:
         result = broadcast(tx)
         return response(result)
