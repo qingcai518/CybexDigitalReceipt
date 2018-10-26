@@ -356,6 +356,7 @@ def transfer():
         result = wallet_transfer(from_name=from_name, to_name=to_name, amount=amount, symbol=symbol, private_key=private_key, public_key=public_key, memo=memo)
         return response(result)
     except Exception as e:
+        print(e)
         msg = e.args[len(e.args) - 1]
         return error_handler(msg, 400)
 
