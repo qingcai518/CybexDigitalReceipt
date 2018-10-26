@@ -362,20 +362,23 @@ def order(from_symbol, to_symbol, from_count, to_count, uid):
 
 def broadcast(tx):
     try:
-        params = {"jsonrpc": "2.0", "method": "broadcast_transaction_with_callback", "params": [tx], "id": 1}
+        ws = websocket.WebSocket()
+        ws.connect(NODE_RPC)
 
-        data = json.dumps(params)
-        print(data)
+        # 使用之前要先登陆和注册.
+        login_param = {"id": 1, "method": "call", "params": [1, "login", ["",""]]}
+        register_param = {"id": 2, "method": "call", "params": [1, "network_broadcast", []]}
+        param = {"id": 3, "method": "call", "params": [2, "broadcast_transaction", [tx]]}
+        print(json.dumps(param))
 
-        r = requests.post(url=NODE_RPC_URL, data=data, timeout=30)
+        ws.send(json.dumps(login_param))
+        ws.recv()
+        ws.send(json.dumps(register_param))
+        ws.recv()
+        ws.send(json.dumps(param))
+        result = ws.recv()
 
-        if r.status_code != 200:
-            raise Exception("fail to get user info")
-
-        result = r.text
-        print(result)
-
-        return json.loads(r.text).get("result")
+        return json.loads(result)
     except Exception as e:
         print("error ==== {0}".format(e))
         log.error(e)
@@ -457,6 +460,7 @@ def wallet_transfer(from_name, to_name, private_key, public_key, amount, symbol,
         print(result)
         return result
     except Exception as e:
+        log.error(e)
         raise e
 
 
