@@ -56,6 +56,7 @@ def get_full_accounts(uid):
     try:
         param = {"jsonrpc": "2.0", "method": "get_full_accounts", "params": [[uid]], "id": 1}
         result = post_request_until_success(param)
+        print(result)
 
         return result
     except Exception as e:
