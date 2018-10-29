@@ -54,7 +54,7 @@ def get_chain_id():
 
 def get_full_accounts(uid):
     try:
-        params = {"jsonrpc": "2.0", "method": "get_full_accounts", "params": [[uid]], "id": 1}
+        params = {"jsonrpc": "2.0", "method": "get_full_accounts", "params": [[uid], False], "id": 1}
         r = requests.post(url=NODE_RPC_URL, data=json.dumps(params), timeout=30)
 
         if r.status_code != 200:
