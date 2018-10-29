@@ -52,6 +52,19 @@ def get_chain_id():
     return None
 
 
+def get_full_accounts(uid):
+    try:
+        param = {"jsonrpc": "2.0", "method": "get_full_accounts", "params": [[uid]], "id": 1}
+        data = post_request_until_success(param)
+        result = data.get("result")
+
+        return result
+    except Exception as e:
+        msg = e.args[len(e.args) - 1]
+        log.error("fail to get chain id {0}".format(msg))
+    return None
+
+
 def create_account(name, password):
     try:
         instance = BitShares(node=NODE_RPC, **{'prefix': 'cyb'})

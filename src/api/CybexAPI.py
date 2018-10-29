@@ -328,6 +328,23 @@ def chain_id():
         return error_handler(msg, 400)
 
 
+@app.route('/v1/full_account', methods=['GET'])
+def full_account():
+    try:
+        uid = request.args.get("uid")
+        if uid is None:
+            return error_handler("have no uid", 400)
+
+        data = get_full_accounts(uid)
+        result = data.get("result")
+        if result is None:
+            return error_handler("fail to get result", 400)
+        return response(result)
+    except Exception as e:
+        msg = e.args[len(e.args) - 1]
+        return error_handler(msg, 400)
+
+
 @app.route('/v1/transfer', methods=['POST'])
 def transfer():
     request.environ["CONTENT_TYPE"] = "application/json"
