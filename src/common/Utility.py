@@ -55,8 +55,7 @@ def get_chain_id():
 def get_full_accounts(uid):
     try:
         param = {"jsonrpc": "2.0", "method": "get_full_accounts", "params": [[uid]], "id": 1}
-        data = post_request_until_success(param)
-        result = data.get("result")
+        result = post_request_until_success(param)
 
         return result
     except Exception as e:
