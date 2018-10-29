@@ -54,11 +54,15 @@ def get_chain_id():
 
 def get_full_accounts(uid):
     try:
-        param = {"jsonrpc": "2.0", "method": "get_full_accounts", "params": [[uid]], "id": 1}
-        result = post_request_until_success(param)
-        print(result)
+        params = {"jsonrpc": "2.0", "method": "get_full_accounts", "params": [[uid]], "id": 1}
+        r = requests.post(url=NODE_RPC_URL, data=json.dumps(params), timeout=30)
 
-        return result
+        if r.status_code != 200:
+            raise Exception("fail to get user info")
+
+        print(r.text)
+
+        return json.loads(r.text).get("result")
     except Exception as e:
         msg = e.args[len(e.args) - 1]
         log.error("fail to get chain id {0}".format(msg))

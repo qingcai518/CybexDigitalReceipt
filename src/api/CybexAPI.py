@@ -335,8 +335,7 @@ def full_account():
         if uid is None:
             return error_handler("have no uid", 400)
 
-        data = get_full_accounts(uid)
-        result = data.get("result")
+        result = get_full_accounts(uid)
         if result is None:
             return error_handler("fail to get result", 400)
         return response(result)
