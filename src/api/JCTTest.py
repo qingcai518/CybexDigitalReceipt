@@ -12,7 +12,7 @@ from db.DBModel import *
 from flask_caching import Cache
 import websocket
 from websocket import create_connection
-from common import Utility
+from common.Utility import *
 
 app = Blueprint('jct_test_api', __name__)
 

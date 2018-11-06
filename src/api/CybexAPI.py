@@ -305,7 +305,7 @@ def do_broadcast():
 
 
 @app.route('/v1/transfer_fee', methods=['POST'])
-def do_broadcast():
+def do_broadcast_fee():
     request.environ['CONTENT_TYPE'] = 'application/json'
     try:
         data = request.get_json()
