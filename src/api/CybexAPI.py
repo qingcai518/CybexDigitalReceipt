@@ -304,6 +304,43 @@ def do_broadcast():
         return error_handler(e, 400)
 
 
+@app.route('/v1/transfer_fee', methods=['POST'])
+def do_broadcast():
+    request.environ['CONTENT_TYPE'] = 'application/json'
+    try:
+        data = request.get_json()
+    except Exception:
+        return error_handler("参数形式错误")
+
+    from_id = data.get("from_id")
+    to_id =  data.get("to_id")
+    amount = data.get("amount")
+    asset_id = data.get("asset_id")
+    fee_asset_id = data.get("fee_asset_id")
+    from_memo_key = data.get("from_memo_key")
+    to_memo_key = data.get("to_memo_key")
+    nonce = data.get("nonce")
+    message = data.get("memo")
+
+    if from_id is None or to_id is None or amount is None or asset_id is None or fee_asset_id is None:
+        return error_handler("参数不足")
+
+    operations = {
+        "fee": {"amount": 0, "asset_id": fee_asset_id},
+        "from": from_id,
+        "to": to_id,
+        "amount": {"amount": amount, "asset_id": asset_id},
+        "memo": "",
+        "extensions": []
+    }
+
+    try:
+        result = get_required_fee(operations)
+        return response(result)
+    except Exception as e:
+        return error_handler(e, 400)
+
+
 @app.route('/v1/chain', methods=['GET'])
 def chain():
     try:
