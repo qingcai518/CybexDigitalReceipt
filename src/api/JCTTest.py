@@ -42,10 +42,12 @@ def create_asset():
     try:
         ratio = int(ratio_str)
         precision = int(precision_str)
-    except Exception as e:
-        print(e)
+    except:
+        pass
 
     core_exchange_ratio = {'CTB': 1, symbol: ratio}
+
+    print(core_exchange_ratio)
 
     if symbol is None or supply is None:
         return error_handler("should input symbol and supply")
