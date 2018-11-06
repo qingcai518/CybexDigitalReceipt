@@ -37,7 +37,7 @@ def create_asset():
     ratio_str = data.get("ratio")  # 手续费比例.
 
     # 手续费比例, 默认是 1:20 CYB
-    ratio = 20
+    ratio = 1
     precision = 6
     try:
         ratio = int(ratio_str)
@@ -45,7 +45,7 @@ def create_asset():
     except:
         pass
 
-    core_exchange_ratio = {'CTB': 1, symbol: ratio}
+    core_exchange_ratio = {'CYB': 1, symbol: ratio}
 
     print(core_exchange_ratio)
 
