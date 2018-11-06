@@ -36,8 +36,8 @@ def create_asset():
     description = data.get("description")  # 详细描述.
     ratio_str = data.get("ratio")  # 手续费比例.
 
-    # 手续费比例, 默认是 1:1 CYB
-    ratio = 1
+    # 手续费比例, 默认是 1:20 CYB
+    ratio = 20
     precision = 6
     try:
         ratio = int(ratio_str)
