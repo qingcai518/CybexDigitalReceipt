@@ -54,7 +54,7 @@ def create_asset():
 
 
     try:
-        instance = BitShares(node=node_rpc_url, **{'prefix': 'cyb'})
+        instance = cybex.Cybex(node_rpc_url)
         instance.wallet.unlock(wallet_pwd)
 
         result = instance.create_asset(
