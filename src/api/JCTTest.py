@@ -75,4 +75,5 @@ def create_asset():
         return response(result)
     except Exception as e:
         print(e)
-        return error_handler(e)
+        msg = e.args[len(e.args) - 1]
+        return error_handler(msg, 400)
