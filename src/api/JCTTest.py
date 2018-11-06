@@ -12,20 +12,13 @@ from db.DBModel import *
 from flask_caching import Cache
 import websocket
 from websocket import create_connection
+from common import Utility
 
 app = Blueprint('jct_test_api', __name__)
 
 node_rpc_url = 'https://hangzhou.51nebula.com/'
 wallet_pwd = 'longhash'
 cybex_admin = 'zhuanzhi518'
-
-
-def response(result):
-    return make_response(jsonify(result))
-
-
-def error_handler(msg, code=400):
-    return make_response(jsonify({"msg": msg})), code
 
 
 # 最新価格を取得する.
