@@ -21,7 +21,7 @@ wallet_pwd = 'longhash'
 cybex_admin = 'zhuanzhi518'
 
 
-# 最新価格を取得する.
+# 创建资产.
 @app.route('/v1/jct/create_asset', methods=['POST'])
 def create_asset():
     request.environ['CONTENT_TYPE'] = 'application/json'
@@ -52,11 +52,11 @@ def create_asset():
     if symbol is None or supply is None:
         return error_handler("should input symbol and supply")
 
-
     try:
         instance = cybex.Cybex(node_rpc_url)
         instance.wallet.unlock(wallet_pwd)
 
+        # 创建资产.
         result = instance.create_asset(
             symbol=symbol,
             precision=precision,
@@ -69,6 +69,47 @@ def create_asset():
             transfer_restricted=True,    # 发行人是否可以后期调整资产的transfer_restricted
             is_prediction_market=False,  # 预测市场资产，对于普通资产设置为False
             account=cybex_admin   # 创建人.
+        )
+        print(result)
+        return response(result)
+    except Exception as e:
+        print(e)
+        msg = e.args[len(e.args) - 1]
+        return error_handler(msg, 400)
+
+
+# 资产发行.
+@app.route('/v1/jct/issue_asset', methods=['POST'])
+def issue_asset():
+    request.environ['CONTENT_TYPE'] = 'application/json'
+    try:
+        data = request.get_json()
+    except Exception:
+        return error_handler("参数形式错误")
+
+    ticket_id = data.get("ticket_id")   # ticket id.
+    amount = data.get("amount")  # 贩卖ticket的价格.
+    to_uid = data.get("to_uid")  # 购买ticket的用户
+    asset = data.get("asset")  # 购买资产的种类.
+
+    # 设置memo信息.
+    memoDic = {
+        'ticket_id' : ticket_id,
+        'amount' : amount
+    }
+    memo = json.dumps(memoDic)
+
+    try:
+        instance = cybex.Cybex(node_rpc_url)
+        instance.wallet.unlock(wallet_pwd)
+
+        # 发行资产.
+        result = instance.issue_asset(
+            to=to_uid,
+            amount=1,  # 发行给购买的用户一个资产
+            asset=asset,
+            memo=memo,
+            account=cybex_admin
         )
 
         print(result)

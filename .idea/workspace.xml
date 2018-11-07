@@ -37,13 +37,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="34" />
-          <entry key="py" value="35323" />
+          <entry key="py" value="36595" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="34" />
-          <entry key="Python" value="35323" />
+          <entry key="Python" value="36595" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -91,8 +91,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/api/JCTTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="913">
-              <caret line="78" column="37" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
+            <state relative-caret-position="598">
+              <caret line="98" column="5" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
               <folding>
                 <element signature="e#0#60#0" expanded="true" />
               </folding>
@@ -167,8 +167,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>get_assets</find>
-      <find>lookup_asset_symbolslookup_asset_symbols</find>
       <find>create_connection</find>
       <find>private_key</find>
       <find>dumps</find>
@@ -197,6 +195,8 @@
       <find>instance</find>
       <find>error_handler</find>
       <find>do_broadcast</find>
+      <find>send assete number</find>
+      <find>to_uid</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -461,8 +461,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/api/JCTTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="913">
-          <caret line="78" column="37" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
+        <state relative-caret-position="598">
+          <caret line="98" column="5" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
           <folding>
             <element signature="e#0#60#0" expanded="true" />
           </folding>
