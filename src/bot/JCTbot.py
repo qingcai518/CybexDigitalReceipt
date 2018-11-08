@@ -3,12 +3,20 @@ import time
 import hmac
 import hashlib
 import requests
+from enum import Enum
 
 api_key = 'be4dd2ef02bf6c7205da170e89b99e96'
 api_secret = 'e06791211692c0df9e79a90e0fe7cbf5'
 memo = 'jctbot'
+base_symbol = "JCT_ETH"
 
 
+class Side(Enum):
+    buy = "buy"
+    sell = "sell"
+
+
+## 获取签名.
 ## 获取签名.
 def create_sha256_signature(message):
     key_bytes = bytes(api_secret, 'latin-1')
@@ -119,4 +127,14 @@ def cancelOrder(order_id):
     print(response.text)
 
 
-listOrders(symbol="JCT_ETH", status=3, offset=0, limit=100)
+# 1. sample for placeOrder:
+result = placeOrder(amount=1, price=0.00135, side=Side.buy.value, symbol=base_symbol)
+# when error : result.get("message")
+# when success: result.get("entrust_id")
+
+# 2. sample for cancelOrder:
+# order_id = result.get("entrust_id")
+# result = cancelOrder(order_id=order_id)
+
+# 3. sample for listOrders:
+# listOrders(symbol=base_symbol, status=3, offset=0, limit=100)
