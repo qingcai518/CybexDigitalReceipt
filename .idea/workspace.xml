@@ -38,13 +38,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="34" />
-          <entry key="py" value="43202" />
+          <entry key="py" value="47234" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="34" />
-          <entry key="Python" value="43202" />
+          <entry key="Python" value="47234" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -103,13 +103,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/bot/JCTbot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="129" column="59" selection-start-line="129" selection-start-column="59" selection-end-line="129" selection-end-column="59" />
+            <state relative-caret-position="659">
+              <caret line="161" column="13" selection-start-line="161" selection-start-column="13" selection-end-line="161" selection-end-column="13" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <marker date="1541656638230" expanded="true" signature="561:625" ph="..." />
-                <marker date="1541656638230" expanded="true" signature="1092:1325" ph="..." />
-                <marker date="1541656638230" expanded="true" signature="1345:1508" ph="..." />
+                <marker date="1541659666691" expanded="true" signature="588:590" ph="..." />
+                <marker date="1541659666691" expanded="true" signature="607:644" ph="..." />
+                <marker date="1541659666691" expanded="true" signature="923:987" ph="..." />
+                <marker date="1541659666691" expanded="true" signature="1454:1689" ph="..." />
+                <marker date="1541659666691" expanded="true" signature="1709:1969" ph="..." />
+                <marker date="1541659666691" expanded="true" signature="2964:2967" ph="..." />
               </folding>
             </state>
           </provider>
@@ -182,17 +185,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>full_accoun</find>
-      <find>post_request_until_success</find>
-      <find>full_</find>
-      <find>get_full_accounts</find>
-      <find>fee</find>
-      <find>istance =</find>
-      <find>instacne</find>
-      <find>import cybex</find>
-      <find>instance</find>
-      <find>send assete number</find>
-      <find>to_uid</find>
       <find>error_handler</find>
       <find>do_broadcast</find>
       <find>def create_asset()</find>
@@ -203,15 +195,26 @@
       <find>key_bytest</find>
       <find>print(token</find>
       <find>print</find>
-      <find>signature</find>
       <find>grant_type</find>
       <find>memo</find>
       <find>message</find>
       <find>let message</find>
       <find>1</find>
       <find>price=</find>
-      <find>content size</find>
       <find>return token</find>
+      <find>entrust</find>
+      <find>signature</find>
+      <find>cancel</find>
+      <find>X-BM-SIGNATURE</find>
+      <find>&quot;buy&quot;</find>
+      <find>base_symbol</find>
+      <find>JCT_ETH</find>
+      <find>rawValue</find>
+      <find>content size</find>
+      <find>buy</find>
+      <find>conten size</find>
+      <find>status=</find>
+      <find>orderDetail</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -470,13 +473,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bot/JCTbot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="129" column="59" selection-start-line="129" selection-start-column="59" selection-end-line="129" selection-end-column="59" />
+        <state relative-caret-position="659">
+          <caret line="161" column="13" selection-start-line="161" selection-start-column="13" selection-end-line="161" selection-end-column="13" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1541656638230" expanded="true" signature="561:625" ph="..." />
-            <marker date="1541656638230" expanded="true" signature="1092:1325" ph="..." />
-            <marker date="1541656638230" expanded="true" signature="1345:1508" ph="..." />
+            <marker date="1541659666691" expanded="true" signature="588:590" ph="..." />
+            <marker date="1541659666691" expanded="true" signature="607:644" ph="..." />
+            <marker date="1541659666691" expanded="true" signature="923:987" ph="..." />
+            <marker date="1541659666691" expanded="true" signature="1454:1689" ph="..." />
+            <marker date="1541659666691" expanded="true" signature="1709:1969" ph="..." />
+            <marker date="1541659666691" expanded="true" signature="2964:2967" ph="..." />
           </folding>
         </state>
       </provider>

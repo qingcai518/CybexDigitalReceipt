@@ -11,6 +11,16 @@ memo = 'jctbot'
 base_symbol = "JCT_ETH"
 
 
+class Status(Enum):
+    all = 0        # All orders.
+    pending = 1    # Pending orders.
+    partially_success = 2  # Partially successful orders.
+    success = 3    # Success orders.
+    canceled = 4   # Canceled orders.
+    pending_and_partially_success = 5  # Pending and Partially success orders.
+    success_and_canceled = 6  # Success and Canceled orders.
+
+
 class Side(Enum):
     buy = "buy"
     sell = "sell"
@@ -71,6 +81,9 @@ def walletBalance():
 
 
 ## 挂单.
+## 返回值:
+## 挂单成功时，返回的dict里面包含订单的id {"entrust_id": xxx}
+## 挂单失败时，返回的dict里面包含出错的信息 {"message": xxx}
 def placeOrder(amount, price, side, symbol):
     print("==== Place Order ====")
     url = "https://openapi.bitmart.com/v2/orders"
@@ -91,25 +104,20 @@ def placeOrder(amount, price, side, symbol):
     }
     json_data = json.dumps(data)
     response = requests.post(url=url, data=json_data, headers=headers)
-    print(response.text)
-
-    ###
-    # response:
-    # error: {"message": xxxxMSG}
-    # success: {"entrust_id": xxxID}
-    ###
-
-    return response.text
+    result = response.text
+    print(result)
+    return result
 
 
-## 订单列表.
-def listOrders(symbol, status, offset, limit):
-    print("==== List Orders ====")
-    url = "https://openapi.bitmart.com/v2/orders?symbol={0}&status={1}&offset={2}&limit={3}".format(symbol, status, offset, limit)
-    print(url)
+## 订单详细信息.
+def orderDetail(order_id):
+    print("=== Get Order's Detail ====")
+    url = "https://openapi.bitmart.com/v2/orders/{0}".format(order_id)
     headers = get_headers()
     response = requests.get(url=url, headers=headers)
-    print(response.text)
+    result = response.text
+    print(result)
+    return result
 
 
 ## 取消订单.
@@ -127,14 +135,32 @@ def cancelOrder(order_id):
     print(response.text)
 
 
-# 1. sample for placeOrder:
-result = placeOrder(amount=1, price=0.00135, side=Side.buy.value, symbol=base_symbol)
-# when error : result.get("message")
-# when success: result.get("entrust_id")
+## 订单列表.
+def listOrders(symbol, status, offset, limit):
+    print("==== List Orders ====")
+    url = "https://openapi.bitmart.com/v2/orders?symbol={0}&status={1}&offset={2}&limit={3}".format(symbol, status, offset, limit)
+    print(url)
+    headers = get_headers()
+    response = requests.get(url=url, headers=headers)
+    print(response.text)
 
-# 2. sample for cancelOrder:
+
+# 1. sample for placeOrder:
+# result = placeOrder(amount=1, price=0.00135, side=Side.buy.value, symbol=base_symbol)
 # order_id = result.get("entrust_id")
+
+
+# dummy:
+order_id = 57122957
+
+# 2. sample for get order detail
+# result = orderDetail(order_id=order_id)
+
+
+# 3. sample for cancelOrder:
+result = cancelOrder(order_id=order_id)
+print(result)
 # result = cancelOrder(order_id=order_id)
 
-# 3. sample for listOrders:
-# listOrders(symbol=base_symbol, status=3, offset=0, limit=100)
+# 4. sample for listOrders:
+# listOrders(symbol=base_symbol, status=Status.partially_success.value, offset=0, limit=100)
