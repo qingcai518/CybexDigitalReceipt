@@ -149,18 +149,15 @@ def listOrders(symbol, status, offset, limit):
 # result = placeOrder(amount=1, price=0.00135, side=Side.buy.value, symbol=base_symbol)
 # order_id = result.get("entrust_id")
 
-
-# dummy:
-order_id = 57122957
-
 # 2. sample for get order detail
 # result = orderDetail(order_id=order_id)
 
 
 # 3. sample for cancelOrder:
-result = cancelOrder(order_id=order_id)
-print(result)
 # result = cancelOrder(order_id=order_id)
+
+# 4. sammple for listOrders.
+listOrders(symbol=base_symbol, status=Status.partially_success.value, offset=0, limit=100)
 
 # 4. sample for listOrders:
 # listOrders(symbol=base_symbol, status=Status.partially_success.value, offset=0, limit=100)
