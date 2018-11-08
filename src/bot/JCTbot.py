@@ -119,15 +119,7 @@ def cancelOrder(order_id):
     print(response.text)
 
 
-# 调用注文api.
-result = placeOrder(amount=1, price=0.00135, side="buy", symbol="JCT_ETH")
-print("result = {0}".format(result))
+# 讲刚才的两笔订单取消.
+# cancelOrder("57098199")
+# cancelOrder("57099437")
 
-# 调用注文列表.
-# listOrders(symbol="BMX_ETH", status=0, offset=0, limit=100)
-
-# 调用取消注文api.
-# cancelOrder(order_id=order_id)
-
-# 获取钱包列表.
-# walletBalance()
