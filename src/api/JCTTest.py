@@ -53,8 +53,10 @@ def create_asset():
         return error_handler("should input symbol and supply")
 
     try:
+        print("11111")
         instance = cybex.Cybex(node_rpc_url)
         instance.wallet.unlock(wallet_pwd)
+        print("22222")
 
         # 创建资产.
         result = instance.create_asset(
