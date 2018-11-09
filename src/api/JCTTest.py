@@ -46,17 +46,19 @@ def create_asset():
         pass
 
     core_exchange_ratio = {'CYB': 1, symbol: ratio}
-
-    print(core_exchange_ratio)
-
     if symbol is None or supply is None:
         return error_handler("should input symbol and supply")
 
     try:
-        print("11111")
         instance = cybex.Cybex(node_rpc_url)
         instance.wallet.unlock(wallet_pwd)
-        print("22222")
+
+        print("symbol = {0}".format(symbol))
+        print("precision = {0}".format(precision))
+        print("max supply = {0}".format(supply))
+        print("ratio = {0}".format(core_exchange_ratio))
+        print("description = {0}".format(description))
+        print("account = {0}".format(cybex_admin))
 
         # 创建资产.
         result = instance.create_asset(
