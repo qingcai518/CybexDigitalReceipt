@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a09c62f0-cb85-4f15-b77e-74e981bdc903" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bot/JCTbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/bot/JCTbot.py" afterDir="false" />
     </list>
@@ -15,14 +16,14 @@
     <session id="-1857094368">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.7" value="2" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -38,13 +39,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="34" />
-          <entry key="py" value="47361" />
+          <entry key="py" value="50317" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="34" />
-          <entry key="Python" value="47361" />
+          <entry key="Python" value="50317" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -88,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/api/JCTTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="25" column="18" selection-start-line="25" selection-end-line="25" selection-end-column="18" />
+            <state relative-caret-position="133">
+              <caret line="69" column="56" selection-start-line="69" selection-start-column="56" selection-end-line="69" selection-end-column="56" />
               <folding>
                 <element signature="e#0#60#0" expanded="true" />
               </folding>
@@ -100,19 +101,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bot/JCTbot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="159" column="90" selection-start-line="159" selection-start-column="90" selection-end-line="159" selection-end-column="90" />
+            <state relative-caret-position="329">
+              <caret line="157" column="14" selection-start-line="157" selection-start-column="14" selection-end-line="157" selection-end-column="14" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <marker date="1541660148483" expanded="true" signature="588:590" ph="..." />
-                <marker date="1541660148483" expanded="true" signature="607:644" ph="..." />
-                <marker date="1541660148483" expanded="true" signature="923:987" ph="..." />
-                <marker date="1541660148483" expanded="true" signature="1454:1689" ph="..." />
-                <marker date="1541660148483" expanded="true" signature="1709:1969" ph="..." />
-                <marker date="1541660148483" expanded="true" signature="2964:2967" ph="..." />
+                <marker date="1541733288635" expanded="true" signature="629:631" ph="..." />
+                <marker date="1541733288635" expanded="true" signature="648:684" ph="..." />
+                <marker date="1541733288635" expanded="true" signature="955:1019" ph="..." />
+                <marker date="1541733288635" expanded="true" signature="1486:1721" ph="..." />
+                <marker date="1541733288635" expanded="true" signature="1741:2001" ph="..." />
+                <marker date="1541733288635" expanded="true" signature="2996:2999" ph="..." />
               </folding>
             </state>
           </provider>
@@ -185,7 +186,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>do_broadcast</find>
       <find>def create_asset()</find>
       <find>create</find>
       <find>df658d1d61537a842dba5ddb3f69a96f04a87ba4a9b3fba478cece39cb5da57f</find>
@@ -209,12 +209,13 @@
       <find>base_symbol</find>
       <find>JCT_ETH</find>
       <find>rawValue</find>
-      <find>content size</find>
       <find>buy</find>
       <find>conten size</find>
       <find>status=</find>
       <find>orderDetail</find>
       <find>conte</find>
+      <find>content size</find>
+      <find>offset =</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -239,8 +240,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="x" value="-2560" />
+    <option name="width" value="2560" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -250,6 +252,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Course" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -284,7 +287,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -336,10 +338,10 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="-2560" y="0" width="2560" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15081044" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.087436" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -413,16 +415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/JCTTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="25" column="18" selection-start-line="25" selection-end-line="25" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/Utility.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -473,16 +465,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bot/JCTbot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="159" column="90" selection-start-line="159" selection-start-column="90" selection-end-line="159" selection-end-column="90" />
+        <state relative-caret-position="329">
+          <caret line="157" column="14" selection-start-line="157" selection-start-column="14" selection-end-line="157" selection-end-column="14" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1541660148483" expanded="true" signature="588:590" ph="..." />
-            <marker date="1541660148483" expanded="true" signature="607:644" ph="..." />
-            <marker date="1541660148483" expanded="true" signature="923:987" ph="..." />
-            <marker date="1541660148483" expanded="true" signature="1454:1689" ph="..." />
-            <marker date="1541660148483" expanded="true" signature="1709:1969" ph="..." />
-            <marker date="1541660148483" expanded="true" signature="2964:2967" ph="..." />
+            <marker date="1541733288635" expanded="true" signature="629:631" ph="..." />
+            <marker date="1541733288635" expanded="true" signature="648:684" ph="..." />
+            <marker date="1541733288635" expanded="true" signature="955:1019" ph="..." />
+            <marker date="1541733288635" expanded="true" signature="1486:1721" ph="..." />
+            <marker date="1541733288635" expanded="true" signature="1741:2001" ph="..." />
+            <marker date="1541733288635" expanded="true" signature="2996:2999" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/JCTTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="69" column="56" selection-start-line="69" selection-start-column="56" selection-end-line="69" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
           </folding>
         </state>
       </provider>

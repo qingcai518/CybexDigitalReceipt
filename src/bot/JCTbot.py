@@ -3,7 +3,9 @@ import time
 import hmac
 import hashlib
 import requests
+import ast
 from enum import Enum
+from datetime import datetime
 
 api_key = 'be4dd2ef02bf6c7205da170e89b99e96'
 api_secret = 'e06791211692c0df9e79a90e0fe7cbf5'
@@ -26,7 +28,6 @@ class Side(Enum):
     sell = "sell"
 
 
-## 获取签名.
 ## 获取签名.
 def create_sha256_signature(message):
     key_bytes = bytes(api_secret, 'latin-1')
@@ -135,6 +136,15 @@ def cancelOrder(order_id):
     print(response.text)
 
 
+## 取消所有订单.
+def cancelAllOrders(symbol, side):
+    print("==== Cancel all orders ====")
+    url = "https://openapi.bitmart.com/v2/orders?symbol={0}&side={1}".format(symbol, side)
+    headers = get_headers()
+    response = requests.delete(url=url, headers=headers)
+    print(response.text)
+
+
 ## 订单列表.
 def listOrders(symbol, status, offset, limit):
     print("==== List Orders ====")
@@ -142,7 +152,60 @@ def listOrders(symbol, status, offset, limit):
     print(url)
     headers = get_headers()
     response = requests.get(url=url, headers=headers)
-    print(response.text)
+    result = response.text
+    dict = ast.literal_eval(result)
+
+    msg = dict.get("message")
+    if msg is not None:
+        print("[Error] : {0}".format(msg))
+        return
+
+    orders = dict.get("orders")
+    for order in orders:
+        mili = order.get("timestamp") / 1000
+        order_time = datetime.fromtimestamp(mili).strftime('%Y-%m-%d %H:%M:%S')
+        order["time"] = order_time
+        print(order)
+
+
+# print("========== BTC_USDT =========")
+# listOrders(symbol="BTC_USDT", status=Status.pending.value, offset=0, limit=1000)
+# listOrders(symbol="BTC_USDT", status=Status.success.value, offset=0, limit=1000)
+# listOrders(symbol="BTC_USDT", status=Status.canceled.value, offset=0, limit=1000)
+# listOrders(symbol="BTC_USDT", status=Status.pending_and_partially_success.value, offset=0, limit=1000)
+# listOrders(symbol="BTC_USDT", status=Status.success_and_canceled.value, offset=0, limit=1000)
+# listOrders(symbol="BTC_USDT", status=Status.canceled.value, offset=0, limit=1000)
+#
+# print("========= ETH BTC ==========")
+# listOrders(symbol="ETH_BTC", status=Status.pending.value, offset=0, limit=1000)
+# listOrders(symbol="ETH_BTC", status=Status.partially_success.value, offset=0, limit=1000)
+# listOrders(symbol="ETH_BTC", status=Status.success.value, offset=0, limit=1000)
+# listOrders(symbol="ETH_BTC", status=Status.canceled.value, offset=0, limit=1000)
+# listOrders(symbol="ETH_BTC", status=Status.pending_and_partially_success.value, offset=0, limit=1000)
+# listOrders(symbol="ETH_BTC", status=Status.success_and_canceled.value, offset=0, limit=1000)
+
+# print("========= BMX BTC ==========")
+# listOrders(symbol="BMX_BTC", status=Status.pending.value, offset=0, limit=1000)
+# listOrders(symbol="BMX_BTC", status=Status.success.value, offset=0, limit=1000)
+# listOrders(symbol="BMX_BTC", status=Status.canceled.value, offset=0, limit=1000)
+# listOrders(symbol="BMX_BTC", status=Status.pending_and_partially_success.value, offset=0, limit=1000)
+# listOrders(symbol="BMX_BTC", status=Status.success_and_canceled.value, offset=0, limit=1000)
+# listOrders(symbol="BMX_BTC", status=Status.canceled.value, offset=0, limit=1000)
+#
+print("========== JCT_BTC =========")
+print("[Canceled]")
+listOrders(symbol="JCT_BTC", status=Status.canceled.value, offset=0, limit=1000)
+print("[Pending]")
+listOrders(symbol="JCT_BTC", status=Status.pending.value, offset=0, limit=1000)
+print("[Success]")
+listOrders(symbol="JCT_BTC", status=Status.success.value, offset=0, limit=1000)
+print("[Partially success]")
+listOrders(symbol="JCT_BTC", status=Status.partially_success.value, offset=0, limit=1000)
+print("[Pending and Partially success]")
+listOrders(symbol="JCT_BTC", status=Status.pending_and_partially_success.value, offset=0, limit=1000)
+print("[Success and canceled]")
+listOrders(symbol="JCT_BTC", status=Status.success_and_canceled.value, offset=0, limit=1000)
+
 
 
 # 1. sample for placeOrder:
@@ -157,7 +220,5 @@ def listOrders(symbol, status, offset, limit):
 # result = cancelOrder(order_id=order_id)
 
 # 4. sammple for listOrders.
-listOrders(symbol=base_symbol, status=Status.partially_success.value, offset=0, limit=100)
-
-# 4. sample for listOrders:
 # listOrders(symbol=base_symbol, status=Status.partially_success.value, offset=0, limit=100)
+
